@@ -122,7 +122,7 @@ public class PacienteCxHC extends javax.swing.JFrame {
         jLabel8.setText("Especialidad");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, -1, -1));
 
-        botMenuPaciente.setText("Volver a menu principal");
+        botMenuPaciente.setText("VOLVER");
         botMenuPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botMenuPacienteActionPerformed(evt);

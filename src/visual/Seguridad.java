@@ -97,7 +97,7 @@ public class Seguridad extends javax.swing.JFrame {
 
         botAceptar.transferFocus();
         
-        if (String.valueOf(txtUsu.getText()).compareTo("codoacodo")==0 && String.valueOf(passContra.getPassword()).compareTo("123")==0){
+        if (String.valueOf(txtUsu.getText()).compareTo("dei")==0 && String.valueOf(passContra.getPassword()).compareTo("123")==0){
             MenuPrincipal menu = new MenuPrincipal();
             menu.setVisible(true);
             this.setVisible(false);

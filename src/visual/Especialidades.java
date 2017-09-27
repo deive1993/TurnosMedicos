@@ -114,7 +114,9 @@ public class Especialidades extends javax.swing.JFrame {
    
 
     private void botRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botRegistroActionPerformed
-        // TODO add your handling code here:
+        EspRegistro registro = new EspRegistro();
+        registro.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_botRegistroActionPerformed
 
     private void botCxFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botCxFActionPerformed
