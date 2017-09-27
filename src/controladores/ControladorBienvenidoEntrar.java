@@ -47,6 +47,7 @@ public class ControladorBienvenidoEntrar implements MouseListener {
 
     @Override
     public void mousePressed(MouseEvent e) {
+        
     }
 
     @Override
