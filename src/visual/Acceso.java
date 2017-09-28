@@ -5,21 +5,26 @@
  */
 package visual;
 
+import controladores.ControladorAceptar;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author USER
  */
-public class Seguridad extends javax.swing.JFrame {
+public class Acceso extends javax.swing.JFrame {
 
     /**
      * Creates new form Seguridad
      */
-    public Seguridad() {
+    public Acceso() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.setTitle("SEGURIDAD");
+        this.setTitle("ACCESO");
+        controladorEntrar = new ControladorAceptar(txtUsu, passContra);
+        botAceptar.addMouseListener(controladorEntrar);
+       
+        
     }
 
     /**
@@ -31,64 +36,80 @@ public class Seguridad extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtUsu = new javax.swing.JTextField();
         passContra = new javax.swing.JPasswordField();
         botAceptar = new javax.swing.JButton();
         botCancelar = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jLabel5 = new javax.swing.JLabel();
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/fondo_verde.jpg"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(51, 102, 255));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("CONTRASEÑA  : ");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, 20));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, 20));
 
         jLabel2.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("USUARIO : ");
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, 20));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 110, 20));
 
         txtUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtUsuActionPerformed(evt);
             }
         });
-        getContentPane().add(txtUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 120, 20));
+        getContentPane().add(txtUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 120, 20));
 
         passContra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passContraActionPerformed(evt);
             }
         });
-        getContentPane().add(passContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 120, 20));
+        getContentPane().add(passContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 120, 20));
 
-        botAceptar.setBackground(new java.awt.Color(204, 255, 204));
         botAceptar.setText("ACEPTAR");
         botAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botAceptarActionPerformed(evt);
             }
         });
-        getContentPane().add(botAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 110, -1));
+        getContentPane().add(botAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 110, -1));
 
-        botCancelar.setBackground(new java.awt.Color(204, 255, 204));
         botCancelar.setText("CANCELAR");
         botCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botCancelarActionPerformed(evt);
             }
         });
-        getContentPane().add(botCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 110, -1));
+        getContentPane().add(botCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 110, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/fondo_verde.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 110));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/Banned User.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 130, 120));
+
+        jRadioButton1.setText("PACIENTE");
+        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
+
+        jRadioButton2.setText("SECRETARIA");
+        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, -1, -1));
+
+        jRadioButton3.setText("MEDICOS");
+        getContentPane().add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, -1));
+
+        jLabel5.setText("¿ vos sos ?, selecione su opción :");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 200, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -96,7 +117,7 @@ public class Seguridad extends javax.swing.JFrame {
     private void botAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botAceptarActionPerformed
 
         botAceptar.transferFocus();
-        
+        /*
         if (String.valueOf(txtUsu.getText()).compareTo("dei")==0 && String.valueOf(passContra.getPassword()).compareTo("123")==0){
             MenuPrincipal menu = new MenuPrincipal();
             menu.setVisible(true);
@@ -105,6 +126,7 @@ public class Seguridad extends javax.swing.JFrame {
         else {
             JOptionPane.showMessageDialog(rootPane, "usuario o contraseña incorrecta");
         }
+*/
     }//GEN-LAST:event_botAceptarActionPerformed
 
     private void txtUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuActionPerformed
@@ -132,7 +154,14 @@ public class Seguridad extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JPasswordField passContra;
     private javax.swing.JTextField txtUsu;
     // End of variables declaration//GEN-END:variables
+
+    private ControladorAceptar controladorEntrar;
 }

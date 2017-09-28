@@ -1,8 +1,8 @@
 package visual;
 
-public class Pacientes extends javax.swing.JFrame {
+public class MenuPacientes extends javax.swing.JFrame {
 
-      public Pacientes() {
+      public MenuPacientes() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setTitle("PACIENTES");
@@ -19,8 +19,6 @@ public class Pacientes extends javax.swing.JFrame {
         botRegPac = new javax.swing.JButton();
         botCxFpaciente = new javax.swing.JButton();
         botCxPpaciente = new javax.swing.JButton();
-        botCxEpaciente = new javax.swing.JButton();
-        botCxHCpaciente = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,7 +42,7 @@ public class Pacientes extends javax.swing.JFrame {
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 400, 50));
 
         botRegPac.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        botRegPac.setText("REGISTRO DE PACIENTES");
+        botRegPac.setText("MIS TURNOS");
         botRegPac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botRegPacActionPerformed(evt);
@@ -53,7 +51,7 @@ public class Pacientes extends javax.swing.JFrame {
         getContentPane().add(botRegPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 320, 40));
 
         botCxFpaciente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        botCxFpaciente.setText("CONSULTA POR FECHA");
+        botCxFpaciente.setText("RESERVA DE TURNO");
         botCxFpaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botCxFpacienteActionPerformed(evt);
@@ -62,31 +60,13 @@ public class Pacientes extends javax.swing.JFrame {
         getContentPane().add(botCxFpaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 320, 40));
 
         botCxPpaciente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        botCxPpaciente.setText("CONSULTA POR PROFESIONAL");
+        botCxPpaciente.setText("CANCELAR TURNO");
         botCxPpaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botCxPpacienteActionPerformed(evt);
             }
         });
         getContentPane().add(botCxPpaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 320, 40));
-
-        botCxEpaciente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        botCxEpaciente.setText("CONSULTA POR ESPECIALIDAD");
-        botCxEpaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botCxEpacienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(botCxEpaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 320, 40));
-
-        botCxHCpaciente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        botCxHCpaciente.setText("CONSULTA HISTORIAS CLINICAS");
-        botCxHCpaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botCxHCpacienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(botCxHCpaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 320, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/turnos (2).jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 560));
@@ -121,25 +101,9 @@ public class Pacientes extends javax.swing.JFrame {
        
     }//GEN-LAST:event_botCxPpacienteActionPerformed
 
-    private void botCxEpacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botCxEpacienteActionPerformed
-        
-        PacienteCxE cxePaciente = new PacienteCxE();
-        cxePaciente.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_botCxEpacienteActionPerformed
-
-    private void botCxHCpacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botCxHCpacienteActionPerformed
-
-        PacienteCxHC cxchPaciente = new PacienteCxHC();
-        cxchPaciente.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_botCxHCpacienteActionPerformed
-
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botCxEpaciente;
     private javax.swing.JButton botCxFpaciente;
-    private javax.swing.JButton botCxHCpaciente;
     private javax.swing.JButton botCxPpaciente;
     private javax.swing.JButton botMenuPrincipal;
     private javax.swing.JButton botRegPac;

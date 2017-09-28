@@ -114,7 +114,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void botPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botPacientesActionPerformed
        
         
-        Pacientes paciente = new Pacientes();
+        MenuPacientes paciente = new MenuPacientes();
         paciente.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_botPacientesActionPerformed

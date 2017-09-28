@@ -317,7 +317,7 @@ public class AsigTurnos extends javax.swing.JFrame {
 
     private void botMenuPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botMenuPacienteActionPerformed
 
-        Pacientes paciente = new Pacientes();
+        MenuPacientes paciente = new MenuPacientes();
         paciente.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_botMenuPacienteActionPerformed

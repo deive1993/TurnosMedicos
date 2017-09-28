@@ -272,7 +272,7 @@ public class PacienteRegistro extends javax.swing.JFrame {
     }//GEN-LAST:event_botEditarActionPerformed
 
     private void botMenuPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botMenuPacienteActionPerformed
-        Pacientes pacientes = new Pacientes();
+        MenuPacientes pacientes = new MenuPacientes();
         pacientes.setVisible(true);
         this.setVisible(false); 
     }//GEN-LAST:event_botMenuPacienteActionPerformed

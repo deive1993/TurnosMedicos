@@ -8,21 +8,36 @@ package controladores;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import models.Persona;
+import visual.Acceso;
 import visual.MenuPrincipal;
 
 public class ControladorAceptar implements MouseListener{
+    private JTextField txtUsu;
+    private JPasswordField passContra;
+    private Persona unaPersona;
+
+    public ControladorAceptar(JTextField txtUsu, JPasswordField passContra) {
+        this.txtUsu = txtUsu;
+        this.passContra = passContra;
+    }
+
+
+
 
     @Override
     public void mouseClicked(MouseEvent e) {
-                botAceptar.transferFocus();
         
         if (String.valueOf(txtUsu.getText()).compareTo("dei")==0 && String.valueOf(passContra.getPassword()).compareTo("123")==0){
+           
             MenuPrincipal menu = new MenuPrincipal();
             menu.setVisible(true);
-            this.setVisible(false);
+            menu.setVisible(false);
         }
         else {
-            JOptionPane.showMessageDialog(rootPane, "usuario o contraseña incorrecta");
+            JOptionPane.showMessageDialog(passContra, "DATOS INCORRECTOS");
         }
     }                                          
 
@@ -48,20 +63,3 @@ public class ControladorAceptar implements MouseListener{
 
     }
 
-    @Override
-    public void mousePressed(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-    }
-    
-}

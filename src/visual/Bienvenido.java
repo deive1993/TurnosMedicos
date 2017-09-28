@@ -38,7 +38,7 @@ public class Bienvenido extends javax.swing.JFrame {
 
         labUsu.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labUsu.setText("Usuario:");
-        getContentPane().add(labUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 20, -1, -1));
+        getContentPane().add(labUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, -1, -1));
         labUsu.getAccessibleContext().setAccessibleDescription("labUsu");
         labUsu.getAccessibleContext().setAccessibleParent(labUsu);
 
@@ -47,13 +47,13 @@ public class Bienvenido extends javax.swing.JFrame {
                 textUsuActionPerformed(evt);
             }
         });
-        getContentPane().add(textUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, 150, -1));
+        getContentPane().add(textUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 150, -1));
         textUsu.getAccessibleContext().setAccessibleDescription("textUsu");
         textUsu.getAccessibleContext().setAccessibleParent(textUsu);
 
         labCont.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labCont.setText("Contraseña:");
-        getContentPane().add(labCont, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, -1, -1));
+        getContentPane().add(labCont, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, -1, -1));
         labCont.getAccessibleContext().setAccessibleDescription("labCont");
         labCont.getAccessibleContext().setAccessibleParent(labCont);
 
@@ -62,7 +62,7 @@ public class Bienvenido extends javax.swing.JFrame {
                 textContActionPerformed(evt);
             }
         });
-        getContentPane().add(textCont, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 50, 150, -1));
+        getContentPane().add(textCont, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 150, -1));
         textCont.getAccessibleContext().setAccessibleDescription("textCont");
         textCont.getAccessibleContext().setAccessibleParent(textCont);
 
@@ -86,7 +86,7 @@ public class Bienvenido extends javax.swing.JFrame {
                 botIngActionPerformed(evt);
             }
         });
-        getContentPane().add(botIng, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 80, 150, -1));
+        getContentPane().add(botIng, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 100, -1));
         botIng.getAccessibleContext().setAccessibleDescription("botIng");
         botIng.getAccessibleContext().setAccessibleParent(botIng);
 
@@ -96,23 +96,23 @@ public class Bienvenido extends javax.swing.JFrame {
                 botRegActionPerformed(evt);
             }
         });
-        getContentPane().add(botReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 110, 150, -1));
+        getContentPane().add(botReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 190, -1));
         botReg.getAccessibleContext().setAccessibleDescription("botReg");
         botReg.getAccessibleContext().setAccessibleParent(botReg);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Turnos para Consultorio Médico");
+        jLabel4.setText("SISTEMA DE TURNOS MEDICOS");
         jLabel4.setOpaque(true);
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 600, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 600, -1));
 
-        botReg1.setText("REGISTRARSE");
+        botReg1.setText("PACIENTE");
         botReg1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botReg1ActionPerformed(evt);
             }
         });
-        getContentPane().add(botReg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 110, 150, -1));
+        getContentPane().add(botReg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 190, -1));
 
         botSalir1.setText("Salir del programa");
         botSalir1.addActionListener(new java.awt.event.ActionListener() {
@@ -122,16 +122,16 @@ public class Bienvenido extends javax.swing.JFrame {
         });
         getContentPane().add(botSalir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 560, 140, -1));
 
-        botPersonal.setText("INGRESO PARA PERSONAL");
+        botPersonal.setText("PROFESIONAL");
         botPersonal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botPersonalActionPerformed(evt);
             }
         });
-        getContentPane().add(botPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 560, 190, -1));
+        getContentPane().add(botPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, 190, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/bienvenida.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -6, 800, 600));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -155,17 +155,13 @@ public class Bienvenido extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_botRegActionPerformed
 
-    private void botReg1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botReg1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botReg1ActionPerformed
-
     private void botSalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botSalir1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botSalir1ActionPerformed
 
     private void botPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botPersonalActionPerformed
         
-        Seguridad seg = new Seguridad();
+        Acceso seg = new Acceso();
         seg.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_botPersonalActionPerformed
@@ -178,6 +174,10 @@ public class Bienvenido extends javax.swing.JFrame {
     private void textContActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textContActionPerformed
       textCont.transferFocus();
     }//GEN-LAST:event_textContActionPerformed
+
+    private void botReg1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botReg1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botReg1ActionPerformed
 
     
    

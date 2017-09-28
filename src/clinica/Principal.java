@@ -7,6 +7,7 @@ package clinica;
 
 import DAO.Coneccion;
 import java.sql.SQLException;
+import visual.Acceso;
 import visual.Bienvenido;
 
 
@@ -20,9 +21,9 @@ public class Principal {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
       
       
-        Bienvenido holaMundo = new Bienvenido();
-        holaMundo.setVisible(true);
-        holaMundo.setAlwaysOnTop(true);
+        Acceso usuario = new Acceso();
+        usuario.setVisible(true);
+        usuario.setAlwaysOnTop(true);
 
 
     }
