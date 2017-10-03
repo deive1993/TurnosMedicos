@@ -136,7 +136,7 @@ public class ProfesionalesCxE extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botMenuProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botMenuProfActionPerformed
-        Profesionales profesional = new Profesionales();
+        MenuProfesionales profesional = new MenuProfesionales();
         profesional.setVisible(true);
         this.setVisible(false);
         

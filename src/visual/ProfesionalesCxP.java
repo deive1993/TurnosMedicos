@@ -182,7 +182,7 @@ public class ProfesionalesCxP extends javax.swing.JFrame {
     }//GEN-LAST:event_BUSCARActionPerformed
 
     private void botMenuProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botMenuProfActionPerformed
-        Profesionales profesional = new Profesionales();
+        MenuProfesionales profesional = new MenuProfesionales();
         profesional.setVisible(true);
         this.setVisible(false);    }//GEN-LAST:event_botMenuProfActionPerformed
 

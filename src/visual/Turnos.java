@@ -106,7 +106,7 @@ public class Turnos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botAsigCanceTurnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botAsigCanceTurnosActionPerformed
-       AsigTurnos asignacion = new AsigTurnos();
+       ReservaTurnosPaciente asignacion = new ReservaTurnosPaciente();
        asignacion.setVisible(true);
        this.setVisible(false);
                
