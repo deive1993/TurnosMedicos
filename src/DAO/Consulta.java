@@ -11,17 +11,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import models.Persona;
+import models.PersonaGenero;
 
 public class Consulta {
    
    public Persona recuperarPersonaUsuClave(Connection conexion, String pUsu, String pClave) throws SQLException {
       Persona unaPersona = null;
       try{
-         PreparedStatement consulta = conexion.prepareStatement("select id, nombre, apellido, genero, dni from persona where usuario = ? and  contrasena = md5(?)");
+         PreparedStatement consulta = conexion.prepareStatement("select id, nombre, apellido, genero_genero_id, dni from persona where usuario = ? and  contrasena = md5(?)");
          consulta.setString(1, pUsu);
          consulta.setString(2, pClave);
          ResultSet resultado = consulta.executeQuery();
          while(resultado.next()){
+             
              unaPersona = new Persona(resultado.getInt("id"), null, resultado.getString("nombre"), resultado.getString("apellido"), resultado.getInt("dni"));
             
          }
@@ -45,6 +47,27 @@ public class Consulta {
          throw new SQLException(ex);
       }
       return listaPersonas;
+      
+     
    }
- 
+ /*
+   public PersonaGenero recuperarGeneroId(Connection conexion,  Integer idGenero) throws SQLException{
+       PersonaGenero personaGenero=null;
+       
+       try{
+         PreparedStatement consulta = conexion.prepareStatement("select id, nombre, apellido, genero_genero_id, dni from persona where usuario = ? and  contrasena = md5(?)");
+         consulta.setInt(1, idGenero);
+         consulta.setInt(2, consulta.executeQuery();
+         ResultSet resultado = consulta.executeQuery();
+         while(resultado.next()){
+             
+             unaPersona = new Persona(resultado.getInt("id"), personaGenero, resultado.getString("nombre"), resultado.getString("apellido"), resultado.getInt("dni"));
+            
+         }
+      }catch(SQLException ex){
+         throw new SQLException(ex);
+      }
+      return personaGenero;       
+   }*/
 }
+

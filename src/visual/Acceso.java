@@ -52,6 +52,7 @@ public class Acceso extends javax.swing.JFrame {
         opcSecretaria = new javax.swing.JRadioButton();
         opcMedico = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/fondo_verde.jpg"))); // NOI18N
 
@@ -114,6 +115,7 @@ public class Acceso extends javax.swing.JFrame {
 
         jLabel5.setText("¿ vos sos ?, selecione su opción :");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 200, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -146,6 +148,7 @@ public class Acceso extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton opcMedico;
     private javax.swing.JRadioButton opcPaciente;
     private javax.swing.JRadioButton opcSecretaria;

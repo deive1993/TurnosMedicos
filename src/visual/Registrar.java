@@ -165,5 +165,5 @@ public class Registrar extends javax.swing.JFrame {
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 
-      private final ControladorRegistrar controladorRegistro;
+      private ControladorRegistrar controladorRegistro;
 }
