@@ -8,6 +8,7 @@ package controladores.Pacientes;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import visual.EstadoTurnosPacientes;
+import visual.PacienteMisTurnos;
 
 /**
  *
@@ -18,8 +19,8 @@ public class ControladorTurnosPaciente implements MouseListener{
     @Override
     public void mouseClicked(MouseEvent e) {
       
-        EstadoTurnosPacientes estadoTurnos = new EstadoTurnosPacientes();
-        estadoTurnos.setVisible(true);
+        PacienteMisTurnos misTurnos = new PacienteMisTurnos();
+        misTurnos.setVisible(true);
     }
 
     @Override

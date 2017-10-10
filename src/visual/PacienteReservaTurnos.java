@@ -9,12 +9,12 @@ package visual;
  *
  * @author PC19
  */
-public class ReservaTurnosPaciente extends javax.swing.JFrame {
+public class PacienteReservaTurnos extends javax.swing.JFrame {
 
     /**
      * Creates new form AsigTurnos
      */
-    public ReservaTurnosPaciente() {
+    public PacienteReservaTurnos() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setTitle("RESERVA DE TURNOS");
@@ -363,21 +363,23 @@ public class ReservaTurnosPaciente extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ReservaTurnosPaciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PacienteReservaTurnos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ReservaTurnosPaciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PacienteReservaTurnos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ReservaTurnosPaciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PacienteReservaTurnos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ReservaTurnosPaciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PacienteReservaTurnos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ReservaTurnosPaciente().setVisible(true);
+                new PacienteReservaTurnos().setVisible(true);
             }
         });
     }

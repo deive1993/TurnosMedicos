@@ -38,6 +38,13 @@ public class PersonaTelefono {
     public void setTel(String tel) {
         this.tel = tel;
     }
+
+    public PersonaTelefono(Integer id, Persona personaId, TipoTel tipoTelId, String tel) {
+        this.id = id;
+        this.personaId = personaId;
+        this.tipoTelId = tipoTelId;
+        this.tel = tel;
+    }
     
     
     

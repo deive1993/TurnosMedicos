@@ -7,7 +7,7 @@ package controladores.Pacientes;
 
 import java.awt.event.MouseEvent;
 import javax.swing.event.MouseInputListener;
-import visual.ReservaTurnosPaciente;
+import visual.PacienteReservaTurnos;
 
 /**
  *
@@ -17,7 +17,7 @@ public class ControladorReservaTurnos implements MouseInputListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        ReservaTurnosPaciente reservaTurnos = new ReservaTurnosPaciente();
+        PacienteReservaTurnos reservaTurnos = new PacienteReservaTurnos();
         reservaTurnos.setVisible(true);
     }
 
