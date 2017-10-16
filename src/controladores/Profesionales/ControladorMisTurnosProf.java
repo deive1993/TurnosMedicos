@@ -7,19 +7,18 @@ package controladores.Profesionales;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import visual.ReprogramarTurnosPacientes;
+import visual.ProfesionalMisTurnos;
 
 /**
  *
  * @author USER
  */
-public class ControladorCancelarTurnosProf implements MouseListener{
+public class ControladorMisTurnosProf implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        
-        ReprogramarTurnosPacientes estadoTurnos = new ReprogramarTurnosPacientes();
-        estadoTurnos.setVisible(true);
+        ProfesionalMisTurnos misTurnosProfecional = new ProfesionalMisTurnos();
+        misTurnosProfecional.setVisible(true);
     }
 
     @Override

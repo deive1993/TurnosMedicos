@@ -5,6 +5,8 @@
  */
 package visual;
 
+import controladores.Pacientes.ControladorVolverPacientes;
+
 /**
  *
  * @author Silvia
@@ -18,6 +20,11 @@ public class PacienteRegistro extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setTitle("REGISTRO DE PACIENTES");
+        
+        controladorMenuPaciente = new ControladorVolverPacientes();
+        botMenuPaciente.addMouseListener(controladorMenuPaciente);
+        
+        
     }
 
     /**
@@ -161,7 +168,7 @@ public class PacienteRegistro extends javax.swing.JFrame {
                 txtGeneroActionPerformed(evt);
             }
         });
-        getContentPane().add(txtGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 150, -1));
+        getContentPane().add(txtGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 60, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
@@ -272,9 +279,7 @@ public class PacienteRegistro extends javax.swing.JFrame {
     }//GEN-LAST:event_botEditarActionPerformed
 
     private void botMenuPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botMenuPacienteActionPerformed
-        MenuPacientes pacientes = new MenuPacientes();
-        pacientes.setVisible(true);
-        this.setVisible(false); 
+        
     }//GEN-LAST:event_botMenuPacienteActionPerformed
 
     private void txtRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRegistroActionPerformed
@@ -339,4 +344,6 @@ public class PacienteRegistro extends javax.swing.JFrame {
     private javax.swing.JTextField txtNombres;
     private javax.swing.JTextField txtRegistro;
     // End of variables declaration//GEN-END:variables
+
+    private ControladorVolverPacientes controladorMenuPaciente;
 }

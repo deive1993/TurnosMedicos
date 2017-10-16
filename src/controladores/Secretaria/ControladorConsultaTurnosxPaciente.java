@@ -7,15 +7,19 @@ package controladores.Secretaria;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import visual.ConsultaPacientes;
 
 /**
  *
  * @author USER
  */
-public class ControladorEstadoTurnosSecre implements MouseListener{
+public class ControladorConsultaTurnosxPaciente implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        ConsultaPacientes consultaPaciente = new ConsultaPacientes();
+        consultaPaciente.setVisible(true);
+                
     }
 
     @Override

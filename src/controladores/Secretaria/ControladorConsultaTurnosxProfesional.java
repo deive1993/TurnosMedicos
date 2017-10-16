@@ -3,19 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controladores.Profesionales;
+package controladores.Secretaria;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import visual.ConsultaTurnosxProfesionales;
 
 /**
  *
  * @author USER
  */
-public class ControladorEstadoTurnosProf implements MouseListener{
+public class ControladorConsultaTurnosxProfesional implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        ConsultaTurnosxProfesionales consultaturnosxprof = new ConsultaTurnosxProfesionales();
+        consultaturnosxprof.setVisible(true);
     }
 
     @Override

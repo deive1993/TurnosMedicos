@@ -5,20 +5,15 @@
  */
 package visual;
 
-import controladores.ControladorRegistrar;
 
-/**
- *
- * @author PC16
- */
 public class Registrar extends javax.swing.JFrame {
 
   
     public Registrar() {
         initComponents();
-         controladorRegistro = new ControladorRegistrar(txtUsuario,txtClave,txtClave2,txtEmail);
-        botRegistrar.addMouseListener(controladorRegistro);
-    }
+        
+      }
+
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -101,9 +96,8 @@ public class Registrar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botRegistrarActionPerformed
-        Bienvenido inicio = new Bienvenido();
-        inicio.setVisible(true);
-        this.setVisible(false);
+       
+        
         
         
     }//GEN-LAST:event_botRegistrarActionPerformed
@@ -165,5 +159,5 @@ public class Registrar extends javax.swing.JFrame {
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 
-      private final ControladorRegistrar controladorRegistro;
+
 }

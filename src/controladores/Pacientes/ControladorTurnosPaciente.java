@@ -7,7 +7,7 @@ package controladores.Pacientes;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import visual.EstadoTurnosPacientes;
+import visual.ReprogramarTurnosPacientes;
 import visual.PacienteMisTurnos;
 
 /**

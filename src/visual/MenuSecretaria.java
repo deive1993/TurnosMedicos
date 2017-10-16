@@ -5,8 +5,14 @@
  */
 package visual;
 
+import controladores.ControladorVolverMenuPrincipal;
 import controladores.Secretaria.ControladorCancelarTurnosSecre;
+import controladores.Secretaria.ControladorConsultaTurnosxPaciente;
 import controladores.Secretaria.ControladorRegistroEspecialidadSecre;
+import controladores.Secretaria.ControladorRegistroProfesional;
+import controladores.Secretaria.ControladorReprogramarTurnosSecre;
+import controladores.Secretaria.ControladorConsultaTurnosxProfesional;
+
 
 /**
  *
@@ -25,8 +31,22 @@ public class MenuSecretaria extends javax.swing.JFrame {
         botRegistroEspecialidad.addMouseListener(controladorRegistroEspecialidad);
         
         
-        controladorCancelarTurnos =new ControladorCancelarTurnosSecre();
-        botCancelarturno.addMouseListener(controladorCancelarTurnos);
+        controladorReprogramarTurno =new ControladorReprogramarTurnosSecre();
+        botReprogramarTurno.addMouseListener(controladorReprogramarTurno);
+        
+        controladorRegistrarProfesional = new ControladorRegistroProfesional();
+        botRegisProfesional.addMouseListener(controladorRegistrarProfesional);
+        
+        controladorConsultaTurnoxProfesional = new ControladorConsultaTurnosxProfesional();
+        botConsdeTurnosxProf.addMouseListener(controladorConsultaTurnoxProfesional);
+        
+
+        
+        controladorConsultaTurnosxPacientes = new ControladorConsultaTurnosxPaciente();
+        botConsdeTurnosxPaciente.addMouseListener(controladorConsultaTurnosxPacientes);
+   
+        controladorRegresar = new ControladorVolverMenuPrincipal();
+        botMenuPrincipal.addMouseListener(controladorRegresar);     
     }
 
  
@@ -35,14 +55,13 @@ public class MenuSecretaria extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel4 = new javax.swing.JLabel();
-        botCxProf = new javax.swing.JButton();
+        botConsdeTurnosxPaciente = new javax.swing.JButton();
         botMenuPrincipal = new javax.swing.JButton();
-        botCancelarturno = new javax.swing.JButton();
+        botReprogramarTurno = new javax.swing.JButton();
         botRegistroEspecialidad = new javax.swing.JButton();
-        botCxP = new javax.swing.JButton();
+        botRegisProfesional = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        botConsdeTurnosxProf = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -50,12 +69,12 @@ public class MenuSecretaria extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 153, 153));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("ESPECIALIDADES");
+        jLabel4.setText("SECRETARIA");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 798, -1));
 
-        botCxProf.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        botCxProf.setText("ESTADO DE TURNOS");
-        getContentPane().add(botCxProf, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 380, 291, 40));
+        botConsdeTurnosxPaciente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botConsdeTurnosxPaciente.setText("CONSULTA DE TURNOS POR PACIENTE");
+        getContentPane().add(botConsdeTurnosxPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 450, 430, 40));
 
         botMenuPrincipal.setText("VOLVER A MENU PRINCIPAL");
         botMenuPrincipal.addActionListener(new java.awt.event.ActionListener() {
@@ -65,14 +84,14 @@ public class MenuSecretaria extends javax.swing.JFrame {
         });
         getContentPane().add(botMenuPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 560, -1, -1));
 
-        botCancelarturno.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        botCancelarturno.setText("CANCELACION DE TURNOS");
-        botCancelarturno.addActionListener(new java.awt.event.ActionListener() {
+        botReprogramarTurno.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botReprogramarTurno.setText("REPROGRAMAR TURNOS");
+        botReprogramarTurno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botCancelarturnoActionPerformed(evt);
+                botReprogramarTurnoActionPerformed(evt);
             }
         });
-        getContentPane().add(botCancelarturno, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 233, -1, 40));
+        getContentPane().add(botReprogramarTurno, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 430, 40));
 
         botRegistroEspecialidad.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         botRegistroEspecialidad.setText("REGISTRO DE ESPECIALIDAD");
@@ -81,16 +100,21 @@ public class MenuSecretaria extends javax.swing.JFrame {
                 botRegistroEspecialidadActionPerformed(evt);
             }
         });
-        getContentPane().add(botRegistroEspecialidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 282, 291, 40));
+        getContentPane().add(botRegistroEspecialidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 430, 40));
 
-        botCxP.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        botCxP.setText("REGISTRO DE PROFESIONAL");
-        getContentPane().add(botCxP, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 331, 291, 40));
+        botRegisProfesional.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botRegisProfesional.setText("REGISTRO DE PROFESIONAL");
+        botRegisProfesional.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botRegisProfesionalActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botRegisProfesional, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 430, 40));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 110, 90));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 680, 600));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/profesionales 2.jpg"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 4, 800, 600));
+        botConsdeTurnosxProf.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botConsdeTurnosxProf.setText("CONSULTA DE TURNOS POR PROFESIONAL");
+        getContentPane().add(botConsdeTurnosxProf, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, 430, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -112,16 +136,10 @@ public class MenuSecretaria extends javax.swing.JFrame {
     }//GEN-LAST:event_ConProfesionalesActionPerformed
 
     private void VolverMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverMenuPrincipalActionPerformed
-        Bienvenido inicio = new Bienvenido();
-        inicio.setVisible(true);
-        this.setVisible(false);
+
     }//GEN-LAST:event_VolverMenuPrincipalActionPerformed
 
    
-
-    private void botCancelarturnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botCancelarturnoActionPerformed
-        
-    }//GEN-LAST:event_botCancelarturnoActionPerformed
 
     private void botRegistroEspecialidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botRegistroEspecialidadActionPerformed
         // TODO add your handling code here:
@@ -134,19 +152,31 @@ public class MenuSecretaria extends javax.swing.JFrame {
        this.setVisible(false);
     }//GEN-LAST:event_botMenuPrincipalActionPerformed
 
+    private void botReprogramarTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botReprogramarTurnoActionPerformed
+
+    }//GEN-LAST:event_botReprogramarTurnoActionPerformed
+
+    private void botRegisProfesionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botRegisProfesionalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botRegisProfesionalActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botCancelarturno;
-    private javax.swing.JButton botCxP;
-    private javax.swing.JButton botCxProf;
+    private javax.swing.JButton botConsdeTurnosxPaciente;
+    private javax.swing.JButton botConsdeTurnosxProf;
     private javax.swing.JButton botMenuPrincipal;
+    private javax.swing.JButton botRegisProfesional;
     private javax.swing.JButton botRegistroEspecialidad;
+    private javax.swing.JButton botReprogramarTurno;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 
 
     private ControladorRegistroEspecialidadSecre controladorRegistroEspecialidad;
-    private ControladorCancelarTurnosSecre  controladorCancelarTurnos;
+    private ControladorReprogramarTurnosSecre  controladorReprogramarTurno;
+    private ControladorRegistroProfesional  controladorRegistrarProfesional;
+    private ControladorConsultaTurnosxProfesional controladorConsultaTurnoxProfesional;
+    private ControladorVolverMenuPrincipal controladorRegresar;
+    private ControladorConsultaTurnosxPaciente controladorConsultaTurnosxPacientes;
+    
 }

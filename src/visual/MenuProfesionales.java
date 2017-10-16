@@ -5,8 +5,9 @@
  */
 package visual;
 
+import controladores.ControladorVolverMenuPrincipal;
 import controladores.Profesionales.ControladorCancelarTurnosProf;
-import controladores.Profesionales.ControladorEstadoTurnosProf;
+import controladores.Profesionales.ControladorMisTurnosProf;
 
 /**
  *
@@ -22,9 +23,11 @@ public class MenuProfesionales extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.setTitle("PROFESIONALES");
         
-       controladorEstadoTurnoPr =new ControladorEstadoTurnosProf();
+       controladorEstadoTurnoPr =new ControladorMisTurnosProf();
         botEstadoTurnos.addMouseListener(controladorEstadoTurnoPr );
-        
+           
+        controladorRegresar = new ControladorVolverMenuPrincipal();
+        botMenuPrincipal.addMouseListener(controladorRegresar);
         
         controladorCancelarTurno =new ControladorCancelarTurnosProf();
         botCancelarTurnos.addMouseListener(controladorCancelarTurno);
@@ -117,9 +120,6 @@ public class MenuProfesionales extends javax.swing.JFrame {
 
     private void botMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botMenuPrincipalActionPerformed
        
-       MenuPrincipal menu = new MenuPrincipal();
-       menu.setVisible(true);
-       this.setVisible(false);
     }//GEN-LAST:event_botMenuPrincipalActionPerformed
 
     private void botEstadoTurnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botEstadoTurnosActionPerformed
@@ -149,7 +149,7 @@ public class MenuProfesionales extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 
-
+    private ControladorVolverMenuPrincipal controladorRegresar;
     private ControladorCancelarTurnosProf controladorCancelarTurno;
-    private ControladorEstadoTurnosProf controladorEstadoTurnoPr;
+    private ControladorMisTurnosProf controladorEstadoTurnoPr;
 }

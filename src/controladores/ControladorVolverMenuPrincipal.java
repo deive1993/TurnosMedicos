@@ -3,23 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controladores.Profesionales;
+package controladores;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import visual.ReprogramarTurnosPacientes;
+import visual.MenuPrincipal;
 
 /**
  *
  * @author USER
  */
-public class ControladorCancelarTurnosProf implements MouseListener{
+public class ControladorVolverMenuPrincipal implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        
-        ReprogramarTurnosPacientes estadoTurnos = new ReprogramarTurnosPacientes();
-        estadoTurnos.setVisible(true);
+        MenuPrincipal menu = new MenuPrincipal();
+        menu.setVisible(true);
     }
 
     @Override

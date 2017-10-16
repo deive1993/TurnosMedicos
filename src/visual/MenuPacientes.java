@@ -1,5 +1,6 @@
 package visual;
 
+import controladores.ControladorVolverMenuPrincipal;
 import controladores.Pacientes.ControladorCancelarTurnos;
 import controladores.Pacientes.ControladorReservaTurnos;
 import controladores.Pacientes.ControladorTurnosPaciente;
@@ -19,6 +20,9 @@ public class MenuPacientes extends javax.swing.JFrame {
         
         controladorCancelarTurnos = new ControladorCancelarTurnos();
         botCancelarTurnos.addMouseListener(controladorCancelarTurnos);
+           
+        controladorRegresar = new ControladorVolverMenuPrincipal();
+        botMenuPrincipal.addMouseListener(controladorRegresar);
     }
 
     
@@ -73,7 +77,7 @@ public class MenuPacientes extends javax.swing.JFrame {
         getContentPane().add(botReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 320, 40));
 
         botCancelarTurnos.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        botCancelarTurnos.setText("CANCELAR TURNO");
+        botCancelarTurnos.setText("REPROGRAMAR TURNO");
         botCancelarTurnos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botCancelarTurnosActionPerformed(evt);
@@ -93,9 +97,7 @@ public class MenuPacientes extends javax.swing.JFrame {
 
     private void botMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botMenuPrincipalActionPerformed
 
-        MenuPrincipal menu = new MenuPrincipal();
-       menu.setVisible(true);
-       this.setVisible(false);      
+         
        
     }//GEN-LAST:event_botMenuPrincipalActionPerformed
 
@@ -120,7 +122,7 @@ public class MenuPacientes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 
-    
+    private ControladorVolverMenuPrincipal controladorRegresar;
     private ControladorTurnosPaciente controladorTurnos;
     private ControladorReservaTurnos controladorReserva;
     private ControladorCancelarTurnos controladorCancelarTurnos;

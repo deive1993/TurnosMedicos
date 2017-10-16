@@ -7,19 +7,18 @@ package controladores.Profesionales;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import visual.ReprogramarTurnosPacientes;
+import visual.MenuProfesionales;
 
 /**
  *
  * @author USER
  */
-public class ControladorCancelarTurnosProf implements MouseListener{
+public class ControladorVolverMenuProfesional implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        
-        ReprogramarTurnosPacientes estadoTurnos = new ReprogramarTurnosPacientes();
-        estadoTurnos.setVisible(true);
+        MenuProfesionales menuProfesional = new MenuProfesionales();
+        menuProfesional.setVisible(true);
     }
 
     @Override
@@ -28,6 +27,7 @@ public class ControladorCancelarTurnosProf implements MouseListener{
 
     @Override
     public void mouseReleased(MouseEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override

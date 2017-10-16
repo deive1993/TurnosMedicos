@@ -7,7 +7,7 @@ package controladores.Pacientes;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import visual.EstadoTurnosPacientes;
+import visual.ReprogramarTurnosPacientes;
 
 /**
  *
@@ -18,7 +18,7 @@ public class ControladorCancelarTurnos implements MouseListener{
     @Override
     public void mouseClicked(MouseEvent e) {
         
-         EstadoTurnosPacientes estadoTurnos = new EstadoTurnosPacientes();
+         ReprogramarTurnosPacientes estadoTurnos = new ReprogramarTurnosPacientes();
         estadoTurnos.setVisible(true);
     }
 
