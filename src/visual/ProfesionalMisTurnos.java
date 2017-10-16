@@ -99,7 +99,7 @@ public class ProfesionalMisTurnos extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 560, 280));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 530, 280));
 
         botLimpiar1.setText("CANCELAR TURNO");
         botLimpiar1.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +107,7 @@ public class ProfesionalMisTurnos extends javax.swing.JFrame {
                 botLimpiar1ActionPerformed(evt);
             }
         });
-        getContentPane().add(botLimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 200, 136, -1));
+        getContentPane().add(botLimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(606, 200, 150, -1));
 
         botLimpiar.setText("ELIMINAR TURNO");
         botLimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +115,7 @@ public class ProfesionalMisTurnos extends javax.swing.JFrame {
                 botLimpiarActionPerformed(evt);
             }
         });
-        getContentPane().add(botLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 330, 136, -1));
+        getContentPane().add(botLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(606, 330, 150, -1));
 
         botMenuProfesional.setText("VOLVER");
         botMenuProfesional.addActionListener(new java.awt.event.ActionListener() {

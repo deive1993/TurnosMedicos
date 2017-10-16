@@ -1,7 +1,7 @@
 package visual;
 
 import controladores.ControladorVolverMenuPrincipal;
-import controladores.Pacientes.ControladorCancelarTurnos;
+import controladores.Pacientes.ControladorReprogranarTurnos;
 import controladores.Pacientes.ControladorReservaTurnos;
 import controladores.Pacientes.ControladorTurnosPaciente;
 
@@ -18,7 +18,7 @@ public class MenuPacientes extends javax.swing.JFrame {
         controladorReserva = new ControladorReservaTurnos();
         botReserva.addMouseListener(controladorReserva);
         
-        controladorCancelarTurnos = new ControladorCancelarTurnos();
+        controladorCancelarTurnos = new ControladorReprogranarTurnos();
         botCancelarTurnos.addMouseListener(controladorCancelarTurnos);
            
         controladorRegresar = new ControladorVolverMenuPrincipal();
@@ -125,5 +125,5 @@ public class MenuPacientes extends javax.swing.JFrame {
     private ControladorVolverMenuPrincipal controladorRegresar;
     private ControladorTurnosPaciente controladorTurnos;
     private ControladorReservaTurnos controladorReserva;
-    private ControladorCancelarTurnos controladorCancelarTurnos;
+    private ControladorReprogranarTurnos controladorCancelarTurnos;
 }

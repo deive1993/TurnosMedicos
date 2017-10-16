@@ -7,6 +7,7 @@ package visual;
 
 import controladores.ControladorVolverMenuPrincipal;
 import controladores.Secretaria.ControladorCancelarTurnosSecre;
+import controladores.Secretaria.ControladorConsultaDatosPersonales;
 import controladores.Secretaria.ControladorConsultaTurnosxPaciente;
 import controladores.Secretaria.ControladorRegistroEspecialidadSecre;
 import controladores.Secretaria.ControladorRegistroProfesional;
@@ -46,7 +47,10 @@ public class MenuSecretaria extends javax.swing.JFrame {
         botConsdeTurnosxPaciente.addMouseListener(controladorConsultaTurnosxPacientes);
    
         controladorRegresar = new ControladorVolverMenuPrincipal();
-        botMenuPrincipal.addMouseListener(controladorRegresar);     
+        botMenuPrincipal.addMouseListener(controladorRegresar); 
+        
+        controladorDatosPersonales = new ControladorConsultaDatosPersonales();
+        botConsdeDatosPersonales.addMouseListener(controladorDatosPersonales);
     }
 
  
@@ -62,6 +66,7 @@ public class MenuSecretaria extends javax.swing.JFrame {
         botRegisProfesional = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         botConsdeTurnosxProf = new javax.swing.JButton();
+        botConsdeDatosPersonales = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -74,7 +79,7 @@ public class MenuSecretaria extends javax.swing.JFrame {
 
         botConsdeTurnosxPaciente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         botConsdeTurnosxPaciente.setText("CONSULTA DE TURNOS POR PACIENTE");
-        getContentPane().add(botConsdeTurnosxPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 450, 430, 40));
+        getContentPane().add(botConsdeTurnosxPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, 430, 40));
 
         botMenuPrincipal.setText("VOLVER A MENU PRINCIPAL");
         botMenuPrincipal.addActionListener(new java.awt.event.ActionListener() {
@@ -115,6 +120,10 @@ public class MenuSecretaria extends javax.swing.JFrame {
         botConsdeTurnosxProf.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         botConsdeTurnosxProf.setText("CONSULTA DE TURNOS POR PROFESIONAL");
         getContentPane().add(botConsdeTurnosxProf, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, 430, 40));
+
+        botConsdeDatosPersonales.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botConsdeDatosPersonales.setText("CONSULTA DATOS PERSONALES");
+        getContentPane().add(botConsdeDatosPersonales, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, 430, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -161,6 +170,7 @@ public class MenuSecretaria extends javax.swing.JFrame {
     }//GEN-LAST:event_botRegisProfesionalActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botConsdeDatosPersonales;
     private javax.swing.JButton botConsdeTurnosxPaciente;
     private javax.swing.JButton botConsdeTurnosxProf;
     private javax.swing.JButton botMenuPrincipal;
@@ -178,5 +188,6 @@ public class MenuSecretaria extends javax.swing.JFrame {
     private ControladorConsultaTurnosxProfesional controladorConsultaTurnoxProfesional;
     private ControladorVolverMenuPrincipal controladorRegresar;
     private ControladorConsultaTurnosxPaciente controladorConsultaTurnosxPacientes;
+    private ControladorConsultaDatosPersonales controladorDatosPersonales;
     
 }

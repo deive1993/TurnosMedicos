@@ -119,7 +119,7 @@ public class PacienteMisTurnos extends javax.swing.JFrame {
                 botLimpiarActionPerformed(evt);
             }
         });
-        getContentPane().add(botLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 460, 136, -1));
+        getContentPane().add(botLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 460, 160, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -135,7 +135,7 @@ public class PacienteMisTurnos extends javax.swing.JFrame {
                 botLimpiar1ActionPerformed(evt);
             }
         });
-        getContentPane().add(botLimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 136, -1));
+        getContentPane().add(botLimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 160, -1));
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -165,7 +165,7 @@ public class PacienteMisTurnos extends javax.swing.JFrame {
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/buscar.png"))); // NOI18N
         jButton1.setText("BUSCAR");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 100, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 120, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

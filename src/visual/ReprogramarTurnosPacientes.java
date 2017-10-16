@@ -38,8 +38,6 @@ public class ReprogramarTurnosPacientes extends javax.swing.JFrame {
         txtApelli = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         txtFechaFin = new javax.swing.JTextField();
         btonBuscar = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
@@ -55,6 +53,8 @@ public class ReprogramarTurnosPacientes extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jComboBox3 = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -64,7 +64,7 @@ public class ReprogramarTurnosPacientes extends javax.swing.JFrame {
         jLabel5.setText("Reprogramar Mis Turnos");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 20, 724, -1));
 
-        jLabel6.setText("Registro N°");
+        jLabel6.setText("N° Turno");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 150, -1, -1));
 
         txtRegist.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +102,96 @@ public class ReprogramarTurnosPacientes extends javax.swing.JFrame {
         jLabel10.setText("Fechas de Consulta");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, 119, -1));
 
+        txtFechaFin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFechaFinActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtFechaFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 120, 90, -1));
+
+        btonBuscar.setText("CANCELAR");
+        btonBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btonBuscarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 260, 110, 30));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/images (1).jpg"))); // NOI18N
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, 100, 90));
+
+        btonLimpiar.setText("MODIFICAR");
+        btonLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btonLimpiarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btonLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 440, 110, 30));
+
+        botMenuPaciente.setText("VOLVER");
+        botMenuPaciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botMenuPacienteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botMenuPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 560, 100, 30));
+
+        btonBuscar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/buscar.png"))); // NOI18N
+        btonBuscar1.setText("BUSCAR");
+        getContentPane().add(btonBuscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 110, 20));
+
+        btonLimpiar1.setText("LIMPIAR");
+        btonLimpiar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btonLimpiar1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btonLimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 380, 110, 30));
+
+        btonBuscar2.setText("ELIMINAR");
+        btonBuscar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btonBuscar2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btonBuscar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 320, 110, 30));
+
+        jLabel12.setText("Especialidad : ");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, -1, -1));
+
+        jLabel13.setText("Profesional:");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, -1, -1));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pediatria", "Psicologia", " " }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 180, 90, -1));
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dr.Luis", "Dr.Juan", "Dr.Agustin", " ", " " }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 210, 90, -1));
+
+        jLabel14.setText("Fecha:");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, -1, -1));
+
+        jLabel15.setText("Hora  : ");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, -1, -1));
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8:00 mañana", "8:30 mañana", "9:00 mañana", "9:30 mañana", "10:00 mañana", "10:30 mañana", "11:00 mañana", "11:30 mañana", " " }));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 150, -1, -1));
+
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -125,11 +215,11 @@ public class ReprogramarTurnosPacientes extends javax.swing.JFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "N° Registro", "Fecha", "Hora", "Especialidad", "Profesional", "Estado"
+                "N° Turno", "Hora", "Fecha", "Especialidad", "Profesional", "Consultorio"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Object.class, java.lang.String.class, java.lang.Integer.class, java.lang.Object.class, java.lang.String.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -137,109 +227,8 @@ public class ReprogramarTurnosPacientes extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(1).setMinWidth(40);
-            jTable1.getColumnModel().getColumn(1).setPreferredWidth(80);
-            jTable1.getColumnModel().getColumn(1).setMaxWidth(80);
-            jTable1.getColumnModel().getColumn(2).setMinWidth(40);
-            jTable1.getColumnModel().getColumn(2).setPreferredWidth(80);
-            jTable1.getColumnModel().getColumn(2).setMaxWidth(80);
-            jTable1.getColumnModel().getColumn(5).setMinWidth(20);
-            jTable1.getColumnModel().getColumn(5).setPreferredWidth(80);
-            jTable1.getColumnModel().getColumn(5).setMaxWidth(80);
-        }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 558, 282));
-
-        txtFechaFin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFechaFinActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtFechaFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 90, -1));
-
-        btonBuscar.setText("CANCELAR");
-        btonBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btonBuscarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 250, 110, 30));
-
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/images (1).jpg"))); // NOI18N
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, 100, 90));
-
-        btonLimpiar.setText("MODIFICAR");
-        btonLimpiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btonLimpiarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btonLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 410, 100, 30));
-
-        botMenuPaciente.setText("VOLVER");
-        botMenuPaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botMenuPacienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(botMenuPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 470, 90, 30));
-
-        btonBuscar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/buscar.png"))); // NOI18N
-        btonBuscar1.setText("BUSCAR");
-        getContentPane().add(btonBuscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 110, 20));
-
-        btonLimpiar1.setText("LIMPIAR");
-        btonLimpiar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btonLimpiar1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btonLimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 350, 110, 30));
-
-        btonBuscar2.setText("ELIMINAR");
-        btonBuscar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btonBuscar2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btonBuscar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 300, 110, 30));
-
-        jLabel12.setText("Especialidad : ");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, -1, -1));
-
-        jLabel13.setText("Profesional:");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, -1, -1));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pediatria", "Psicologia", " " }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 180, 70, -1));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dr.Luis", "Dr.Juan", "Dr.Agustin", " ", " " }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 210, -1, -1));
-
-        jLabel14.setText("Fecha:");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, -1, -1));
-
-        jLabel15.setText("Hora  : ");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, -1, -1));
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8:00 mañana", "8:30 mañana", "9:00 mañana", "9:30 mañana", "10:00 mañana", "10:30 mañana", "11:00 mañana", "11:30 mañana", " " }));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 150, -1, -1));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 550, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
