@@ -9,6 +9,13 @@ public class PersonaGenero {
         return id;
     }
 
+<<<<<<< HEAD
+=======
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+>>>>>>> a88a7b52d20731e07832dc302e1eb96234c026c2
     public String getNombre() {
         return nombre;
     }

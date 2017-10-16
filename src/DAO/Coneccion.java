@@ -27,9 +27,8 @@ public class Coneccion {
       if (cnx == null) {
          try {
             Class.forName("com.mysql.jdbc.Driver");
-            cnx = DriverManager.getConnection("jdbc:mysql://localhost:3307/base_turnos","root","teamo110593gnd");
-              //   cnx = DriverManager.getConnection("jdbc:mysql://"+this.host+"/"+this.bd, this.usu, this.clave);
-            cnx = DriverManager.getConnection("jdbc:mysql://localhost:3307/base_turnos","root","teamo110593gnd");
+           // cnx = DriverManager.getConnection("jdbc:mysql://localhost:3307/base_turnos","root","teamo110593gnd");
+            cnx = DriverManager.getConnection("jdbc:mysql://"+this.host+"/"+this.bd, this.usu, this.clave);
                 System.out.println("conexion establecida");
                 JOptionPane.showMessageDialog(null,"Conectado");
                     

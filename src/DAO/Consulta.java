@@ -11,11 +11,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import models.Persona;
+<<<<<<< HEAD
 import models.PersonaEmail;
 import models.PersonaGenero;
 import models.PersonaTelefono;
 import models.TipoEmail;
 import models.TipoTel;
+=======
+import models.PersonaGenero;
+>>>>>>> a88a7b52d20731e07832dc302e1eb96234c026c2
 
 public class Consulta {
    
@@ -25,13 +29,22 @@ public class Consulta {
       Persona unaPersona = null;
       PersonaGenero personaGenero;
       try{
+<<<<<<< HEAD
          PreparedStatement consulta = conexion.prepareStatement("select id, nombre, apellido, persona_genero_id, dni from persona where usuario = ? and  contraseña = md5(?)");
+=======
+         PreparedStatement consulta = conexion.prepareStatement("select id, nombre, apellido, genero_genero_id, dni from persona where usuario = ? and  contrasena = md5(?)");
+>>>>>>> a88a7b52d20731e07832dc302e1eb96234c026c2
          consulta.setString(1, pUsu);
          consulta.setString(2, pClave);
          ResultSet resultado = consulta.executeQuery();
          while(resultado.next()){
+<<<<<<< HEAD
              personaGenero = this.recuperarGeneroID(conexion,resultado.getInt("persona_genero_id"));
              unaPersona = new Persona(resultado.getInt("id"), personaGenero, resultado.getString("nombre"), resultado.getString("apellido"), resultado.getInt("dni"));
+=======
+             
+             unaPersona = new Persona(resultado.getInt("id"), null, resultado.getString("nombre"), resultado.getString("apellido"), resultado.getInt("dni"));
+>>>>>>> a88a7b52d20731e07832dc302e1eb96234c026c2
             
          }
       }catch(SQLException ex){
@@ -78,7 +91,10 @@ public class Consulta {
          throw new SQLException(ex);
       }
       return listaPersonas;
+      
+     
    }
+<<<<<<< HEAD
  
    
    // lista de persona genero (arraylist)
@@ -152,11 +168,26 @@ public class Consulta {
          while(resultado.next()){
              tipoEmail= this.recuperarEmailID(conexion,resultado.getInt("tipo_email_id"));
              unTelefono = = new PersonaEmail(resultado.getInt("id"), tipoEmail, resultado.getString("nombre"));
+=======
+ /*
+   public PersonaGenero recuperarGeneroId(Connection conexion,  Integer idGenero) throws SQLException{
+       PersonaGenero personaGenero=null;
+       
+       try{
+         PreparedStatement consulta = conexion.prepareStatement("select id, nombre, apellido, genero_genero_id, dni from persona where usuario = ? and  contrasena = md5(?)");
+         consulta.setInt(1, idGenero);
+         consulta.setInt(2, consulta.executeQuery();
+         ResultSet resultado = consulta.executeQuery();
+         while(resultado.next()){
+             
+             unaPersona = new Persona(resultado.getInt("id"), personaGenero, resultado.getString("nombre"), resultado.getString("apellido"), resultado.getInt("dni"));
+>>>>>>> a88a7b52d20731e07832dc302e1eb96234c026c2
             
          }
       }catch(SQLException ex){
          throw new SQLException(ex);
       }
+<<<<<<< HEAD
       return unEmail;
    }
    
@@ -176,4 +207,9 @@ public class Consulta {
       return tipoEmail;
    }
    
+=======
+      return personaGenero;       
+   }*/
+>>>>>>> a88a7b52d20731e07832dc302e1eb96234c026c2
 }
+
