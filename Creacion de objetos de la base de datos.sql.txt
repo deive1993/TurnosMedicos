@@ -1,0 +1,240 @@
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: ventas
+-- ------------------------------------------------------
+-- Server version	5.7.18-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+CREATE DATABASE `ventas` /*!40100 DEFAULT CHARACTER SET utf8 */;
+use ventas;
+--
+-- Table structure for table `clientes`
+--
+
+DROP TABLE IF EXISTS `clientes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `clientes` (
+  `ID` int(11) NOT NULL,
+  `Razon_Social` varchar(100) DEFAULT NULL,
+  `Mail` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `clientes`
+--
+
+LOCK TABLES `clientes` WRITE;
+/*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
+INSERT INTO `clientes` VALUES (13,'El Alfil','alfil@alfil.com'),(14,'La Salamandra','salamandra@fuego.com'),(17,'Don Luis','donluis@donluis.com'),(19,'El Arca','info@elarca.com'),(22,'Los Patitos','info@lospatitos.com'),(24,'Ramos Generales','rgrales@genstore.com');
+/*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `clientes_productos`
+--
+
+DROP TABLE IF EXISTS `clientes_productos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `clientes_productos` (
+  `CodCliente` int(11) NOT NULL,
+  `CodProducto` int(11) NOT NULL,
+  `Cant` int(11) DEFAULT NULL,
+  PRIMARY KEY (`CodCliente`,`CodProducto`),
+  KEY `CodProducto` (`CodProducto`),
+  CONSTRAINT `clientes_productos_ibfk_1` FOREIGN KEY (`CodCliente`) REFERENCES `clientes` (`ID`),
+  CONSTRAINT `clientes_productos_ibfk_2` FOREIGN KEY (`CodProducto`) REFERENCES `productos` (`Codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `clientes_productos`
+--
+
+LOCK TABLES `clientes_productos` WRITE;
+/*!40000 ALTER TABLE `clientes_productos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `clientes_productos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `locales`
+--
+
+DROP TABLE IF EXISTS `locales`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `locales` (
+  `Codigo` int(11) NOT NULL,
+  `Nombre` varchar(30) DEFAULT NULL,
+  `Direccion` varchar(100) DEFAULT NULL,
+  `CodCliente` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Codigo`),
+  KEY `CodCliente` (`CodCliente`),
+  CONSTRAINT `locales_ibfk_1` FOREIGN KEY (`CodCliente`) REFERENCES `clientes` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `locales`
+--
+
+LOCK TABLES `locales` WRITE;
+/*!40000 ALTER TABLE `locales` DISABLE KEYS */;
+INSERT INTO `locales` VALUES (1,'El Alfil de San Martin','Av Conde 44 - San Martin',13),(2,'El Alfil de Santa Rosa','Av CMadero 44 - Santa Rosa, La Pampa',13),(3,'La Salamandra - Bariloche','Av Bustillo 1022 - Bariloche',14),(4,'La Salamandra - Palomar','Av Marconi 1022 - Palomar',14),(7,'Don Luis - Centro','Av Cordoba 1722 - Palomar',17),(8,'El Arca - Centro','Av Corrientes 932 - CABA',19),(9,'Los Patitos - Retiro','Av Corrientes 53 - CABA',22),(10,'Los Patitos - Conesa','Av San Martin 138 - Conesa',22),(11,'Ramos Generales - CABA','Av San Martin 1267 - CABA',24),(12,'Ramos Generales - Perdriel','Av Belgrano 231 - Perdriel',24);
+/*!40000 ALTER TABLE `locales` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pedidos`
+--
+
+DROP TABLE IF EXISTS `pedidos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pedidos` (
+  `Nro` int(11) NOT NULL,
+  `Fecha` datetime DEFAULT NULL,
+  `codCliente` int(11) NOT NULL,
+  PRIMARY KEY (`Nro`),
+  KEY `codCliente` (`codCliente`),
+  CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`codCliente`) REFERENCES `clientes` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pedidos`
+--
+
+LOCK TABLES `pedidos` WRITE;
+/*!40000 ALTER TABLE `pedidos` DISABLE KEYS */;
+INSERT INTO `pedidos` VALUES (1,'2016-10-21 00:00:00',14),(2,'2016-11-13 00:00:00',24),(3,'2016-12-15 00:00:00',17),(4,'2017-03-04 00:00:00',13),(5,'2017-01-10 00:00:00',22),(6,'2017-01-28 00:00:00',14),(7,'2017-03-03 00:00:00',24),(8,'2017-04-09 00:00:00',19);
+/*!40000 ALTER TABLE `pedidos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pedidos_productos`
+--
+
+DROP TABLE IF EXISTS `pedidos_productos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pedidos_productos` (
+  `CodPedido` int(11) NOT NULL,
+  `CodProducto` int(11) NOT NULL,
+  `Cant` int(11) DEFAULT NULL,
+  PRIMARY KEY (`CodPedido`,`CodProducto`),
+  KEY `CodProducto` (`CodProducto`),
+  CONSTRAINT `pedidos_productos_ibfk_1` FOREIGN KEY (`CodPedido`) REFERENCES `pedidos` (`Nro`),
+  CONSTRAINT `pedidos_productos_ibfk_2` FOREIGN KEY (`CodProducto`) REFERENCES `productos` (`Codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pedidos_productos`
+--
+
+LOCK TABLES `pedidos_productos` WRITE;
+/*!40000 ALTER TABLE `pedidos_productos` DISABLE KEYS */;
+INSERT INTO `pedidos_productos` VALUES (1,1,20),(1,2,5),(1,4,11),(2,3,7),(2,4,8),(2,5,12),(3,1,5),(3,3,10),(3,5,15),(4,2,15),(4,3,25),(5,2,21),(5,4,33),(5,5,29),(6,1,13),(6,2,12),(7,3,10),(7,5,1),(8,1,19),(8,5,7);
+/*!40000 ALTER TABLE `pedidos_productos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `productos`
+--
+
+DROP TABLE IF EXISTS `productos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `productos` (
+  `Codigo` int(11) NOT NULL,
+  `Descripcion` varchar(40) DEFAULT NULL,
+  `Precio` float DEFAULT NULL,
+  PRIMARY KEY (`Codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `productos`
+--
+
+LOCK TABLES `productos` WRITE;
+/*!40000 ALTER TABLE `productos` DISABLE KEYS */;
+INSERT INTO `productos` VALUES (1,'Azúcar',15),(2,'Harina',10),(3,'Huevo',1.7),(4,'Leche',22),(5,'Aceite',34);
+/*!40000 ALTER TABLE `productos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `vendedores`
+--
+
+DROP TABLE IF EXISTS `vendedores`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `vendedores` (
+  `Legajo` int(11) NOT NULL,
+  `Nombre` varchar(100) NOT NULL,
+  PRIMARY KEY (`Legajo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `vendedores`
+--
+
+LOCK TABLES `vendedores` WRITE;
+/*!40000 ALTER TABLE `vendedores` DISABLE KEYS */;
+INSERT INTO `vendedores` VALUES (1,'Claudio Perez'),(14,'Mario Sanchez'),(121,'Elena Lopez');
+/*!40000 ALTER TABLE `vendedores` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `vendedores_locales`
+--
+
+DROP TABLE IF EXISTS `vendedores_locales`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `vendedores_locales` (
+  `CodVendedor` int(11) NOT NULL,
+  `CodLocal` int(11) NOT NULL,
+  PRIMARY KEY (`CodVendedor`,`CodLocal`),
+  KEY `CodLocal` (`CodLocal`),
+  CONSTRAINT `vendedores_locales_ibfk_1` FOREIGN KEY (`CodVendedor`) REFERENCES `vendedores` (`Legajo`),
+  CONSTRAINT `vendedores_locales_ibfk_2` FOREIGN KEY (`CodLocal`) REFERENCES `locales` (`Codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `vendedores_locales`
+--
+
+LOCK TABLES `vendedores_locales` WRITE;
+/*!40000 ALTER TABLE `vendedores_locales` DISABLE KEYS */;
+INSERT INTO `vendedores_locales` VALUES (1,1),(1,2),(14,3),(14,4),(1,7),(14,8),(121,9),(121,10),(121,11),(121,12);
+/*!40000 ALTER TABLE `vendedores_locales` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-05-26 23:18:24

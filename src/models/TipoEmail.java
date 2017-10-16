@@ -19,5 +19,10 @@ public class TipoEmail {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    public TipoEmail(Integer id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
     
 }

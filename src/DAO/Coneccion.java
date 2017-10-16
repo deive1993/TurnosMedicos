@@ -6,6 +6,12 @@
 package DAO;
 import java.sql.*;
 import javax.swing.JOptionPane;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 9d69cb11b7d8223aac0fc0b3b8be26c2d977bbed
 
 public class Coneccion {
    private Connection cnx = null;
@@ -24,8 +30,13 @@ public class Coneccion {
       if (cnx == null) {
          try {
             Class.forName("com.mysql.jdbc.Driver");
+<<<<<<< HEAD
          //   cnx = DriverManager.getConnection("jdbc:mysql://"+this.host+"/"+this.bd, this.usu, this.clave);
             cnx = DriverManager.getConnection("jdbc:mysql://localhost:3307/base_turnos","root","teamo110593gnd");
+=======
+           // cnx = DriverManager.getConnection("jdbc:mysql://localhost:3307/base_turnos","root","teamo110593gnd");
+            cnx = DriverManager.getConnection("jdbc:mysql://"+this.host+"/"+this.bd, this.usu, this.clave);
+>>>>>>> 9d69cb11b7d8223aac0fc0b3b8be26c2d977bbed
                 System.out.println("conexion establecida");
                 JOptionPane.showMessageDialog(null,"Conectado");
                     

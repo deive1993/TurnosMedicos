@@ -31,6 +31,7 @@ public class ControladorBienvenidoEntrar implements MouseListener {
     
     @Override
     public void mouseClicked(MouseEvent e) {
+        
         Coneccion conn = new Coneccion("localhost", "root", "", "base_turnos");
         try {
             conn.conectar();

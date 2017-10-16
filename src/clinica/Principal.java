@@ -8,7 +8,6 @@ package clinica;
 import DAO.Coneccion;
 import java.sql.SQLException;
 import visual.Acceso;
-import visual.Bienvenido;
 
 
 

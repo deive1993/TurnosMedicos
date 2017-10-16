@@ -29,6 +29,12 @@ public class PersonaEmail {
         this.email = email;
     }
 
+    public PersonaEmail(Persona personaId, TipoEmail tipoEmailId, String email) {
+        this.personaId = personaId;
+        this.tipoEmailId = tipoEmailId;
+        this.email = email;
+    }
+
     
 
     

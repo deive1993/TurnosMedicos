@@ -19,6 +19,11 @@ public class TipoTel {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    public TipoTel(Integer id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
     
 
     
