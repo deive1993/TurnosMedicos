@@ -46,9 +46,11 @@ public class ConsultaDatosPersonales extends javax.swing.JFrame {
         botMenuSecretaria = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
+        rdoProfesional = new javax.swing.JRadioButton();
+        rdoPaciente = new javax.swing.JRadioButton();
+        botBuscar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -104,7 +106,7 @@ public class ConsultaDatosPersonales extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(6).setMaxWidth(100);
         }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 640, 350));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 710, 340));
 
         jLabel7.setText("Hasta:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 40, -1));
@@ -120,13 +122,14 @@ public class ConsultaDatosPersonales extends javax.swing.JFrame {
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 130, -1));
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 130, -1));
 
+        botMenuSecretaria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/atras.jpg"))); // NOI18N
         botMenuSecretaria.setText("VOLVER");
         botMenuSecretaria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botMenuSecretariaActionPerformed(evt);
             }
         });
-        getContentPane().add(botMenuSecretaria, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 560, -1, -1));
+        getContentPane().add(botMenuSecretaria, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 560, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel9.setText("Seleccione su Opción:");
@@ -139,15 +142,22 @@ public class ConsultaDatosPersonales extends javax.swing.JFrame {
         jLabel5.setText("CONSULTA DE DATOS PERSONALES");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 710, -1));
 
-        jRadioButton1.setText("PROFESIONAL");
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 120, -1));
+        rdoProfesional.setText("PROFESIONAL");
+        getContentPane().add(rdoProfesional, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 120, -1));
 
-        jRadioButton2.setText("PACIENTE");
-        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 90, -1));
+        rdoPaciente.setText("PACIENTE");
+        getContentPane().add(rdoPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 90, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/buscar.png"))); // NOI18N
-        jButton1.setText("BUSCAR");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 100, 120, -1));
+        botBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/buscar.png"))); // NOI18N
+        botBuscar.setText("BUSCAR");
+        getContentPane().add(botBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 100, 120, -1));
+
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/eliminar.png"))); // NOI18N
+        btnEliminar.setText("ELIMINAR");
+        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 140, 120, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/consultapaciente.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -165,19 +175,21 @@ public class ConsultaDatosPersonales extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botBuscar;
     private javax.swing.JButton botMenuSecretaria;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnEliminar;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JRadioButton rdoPaciente;
+    private javax.swing.JRadioButton rdoProfesional;
     // End of variables declaration//GEN-END:variables
 
     

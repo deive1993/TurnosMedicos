@@ -48,13 +48,14 @@ public class MenuProfesionales extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        botMenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/volver.gif"))); // NOI18N
         botMenuPrincipal.setText("VOLVER A MENU PRINCIPAL");
         botMenuPrincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botMenuPrincipalActionPerformed(evt);
             }
         });
-        getContentPane().add(botMenuPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 520, -1, 30));
+        getContentPane().add(botMenuPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 520, -1, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/images (1).jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 20, 110, 110));

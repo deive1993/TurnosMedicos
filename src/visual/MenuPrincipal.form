@@ -105,6 +105,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="botMenuInicio">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/visual/imagenes/Inicio.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="VOLVER A INICIO"/>
       </Properties>
       <Events>
@@ -112,7 +115,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="610" y="480" width="140" height="40"/>
+          <AbsoluteConstraints x="580" y="490" width="180" height="40"/>
         </Constraint>
       </Constraints>
     </Component>

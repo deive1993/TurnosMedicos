@@ -36,26 +36,27 @@ public class PacienteMisTurnos extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaMisturnos = new javax.swing.JTable();
         botMenuPaciente = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        botLimpiar = new javax.swing.JButton();
+        botEliminar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        botLimpiar1 = new javax.swing.JButton();
+        botCancelar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        botBuscar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImages(getIconImages());
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaMisturnos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -89,21 +90,22 @@ public class PacienteMisTurnos extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(1).setMinWidth(40);
-            jTable1.getColumnModel().getColumn(1).setPreferredWidth(80);
-            jTable1.getColumnModel().getColumn(1).setMaxWidth(80);
-            jTable1.getColumnModel().getColumn(2).setMinWidth(50);
-            jTable1.getColumnModel().getColumn(2).setPreferredWidth(100);
-            jTable1.getColumnModel().getColumn(2).setMaxWidth(100);
-            jTable1.getColumnModel().getColumn(5).setMinWidth(30);
-            jTable1.getColumnModel().getColumn(5).setPreferredWidth(80);
-            jTable1.getColumnModel().getColumn(5).setMaxWidth(80);
+        jScrollPane1.setViewportView(tablaMisturnos);
+        if (tablaMisturnos.getColumnModel().getColumnCount() > 0) {
+            tablaMisturnos.getColumnModel().getColumn(1).setMinWidth(40);
+            tablaMisturnos.getColumnModel().getColumn(1).setPreferredWidth(80);
+            tablaMisturnos.getColumnModel().getColumn(1).setMaxWidth(80);
+            tablaMisturnos.getColumnModel().getColumn(2).setMinWidth(50);
+            tablaMisturnos.getColumnModel().getColumn(2).setPreferredWidth(100);
+            tablaMisturnos.getColumnModel().getColumn(2).setMaxWidth(100);
+            tablaMisturnos.getColumnModel().getColumn(5).setMinWidth(30);
+            tablaMisturnos.getColumnModel().getColumn(5).setPreferredWidth(80);
+            tablaMisturnos.getColumnModel().getColumn(5).setMaxWidth(80);
         }
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 560, 280));
 
+        botMenuPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/atras.jpg"))); // NOI18N
         botMenuPaciente.setText("VOLVER");
         botMenuPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,13 +115,14 @@ public class PacienteMisTurnos extends javax.swing.JFrame {
         getContentPane().add(botMenuPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 460, 130, -1));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 0, 100, -1));
 
-        botLimpiar.setText("ELIMINAR TURNO");
-        botLimpiar.addActionListener(new java.awt.event.ActionListener() {
+        botEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/eliminar.png"))); // NOI18N
+        botEliminar.setText("ELIMINAR TURNO");
+        botEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botLimpiarActionPerformed(evt);
+                botEliminarActionPerformed(evt);
             }
         });
-        getContentPane().add(botLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 460, 160, -1));
+        getContentPane().add(botEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 460, 160, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -129,19 +132,20 @@ public class PacienteMisTurnos extends javax.swing.JFrame {
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/images (1).jpg"))); // NOI18N
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 0, 100, 90));
 
-        botLimpiar1.setText("CANCELAR TURNO");
-        botLimpiar1.addActionListener(new java.awt.event.ActionListener() {
+        botCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/cancelar.png"))); // NOI18N
+        botCancelar.setText("CANCELAR TURNO");
+        botCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botLimpiar1ActionPerformed(evt);
+                botCancelarActionPerformed(evt);
             }
         });
-        getContentPane().add(botLimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 160, -1));
+        getContentPane().add(botCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 160, -1));
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel10.setText("FECHA : ");
         jLabel10.setOpaque(true);
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 70, 20));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 50, 20));
 
         jLabel4.setText("Desde: ");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, -1, -1));
@@ -163,9 +167,12 @@ public class PacienteMisTurnos extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 70, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/buscar.png"))); // NOI18N
-        jButton1.setText("BUSCAR");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 120, -1));
+        botBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/buscar.png"))); // NOI18N
+        botBuscar.setText("BUSCAR");
+        getContentPane().add(botBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 120, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/fondo_verde.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -174,13 +181,13 @@ public class PacienteMisTurnos extends javax.swing.JFrame {
        
     }//GEN-LAST:event_botMenuPacienteActionPerformed
 
-    private void botLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botLimpiarActionPerformed
+    private void botEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botEliminarActionPerformed
       
-    }//GEN-LAST:event_botLimpiarActionPerformed
+    }//GEN-LAST:event_botEliminarActionPerformed
 
-    private void botLimpiar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botLimpiar1ActionPerformed
+    private void botCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botCancelarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botLimpiar1ActionPerformed
+    }//GEN-LAST:event_botCancelarActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
@@ -192,10 +199,11 @@ public class PacienteMisTurnos extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botLimpiar;
-    private javax.swing.JButton botLimpiar1;
+    private javax.swing.JButton botBuscar;
+    private javax.swing.JButton botCancelar;
+    private javax.swing.JButton botEliminar;
     private javax.swing.JButton botMenuPaciente;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
@@ -204,9 +212,9 @@ public class PacienteMisTurnos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTable tablaMisturnos;
     // End of variables declaration//GEN-END:variables
 
     private ControladorVolverPacientes controladorMenuPaciente;

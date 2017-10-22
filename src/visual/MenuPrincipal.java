@@ -88,13 +88,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/images (1).jpg"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 90));
 
+        botMenuInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/Inicio.png"))); // NOI18N
         botMenuInicio.setText("VOLVER A INICIO");
         botMenuInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botMenuInicioActionPerformed(evt);
             }
         });
-        getContentPane().add(botMenuInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 480, 140, 40));
+        getContentPane().add(botMenuInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 490, 180, 40));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 40)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 204, 204));

@@ -11,12 +11,12 @@ import controladores.Secretaria.ControladorVolverMenuSecre;
  *
  * @author Silvia
  */
-public class ConsultaPacientes extends javax.swing.JFrame {
+public class ConsultaTurnosxPacientes extends javax.swing.JFrame {
 
     /**
      * Creates new form pacienteCxHC
      */
-    public ConsultaPacientes() {
+    public ConsultaTurnosxPacientes() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setTitle("CONSULTA DE TURNOS POR PACIENTES");
@@ -42,7 +42,7 @@ public class ConsultaPacientes extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jLabel10 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -54,19 +54,21 @@ public class ConsultaPacientes extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        botMenuSecretaria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/atras.jpg"))); // NOI18N
         botMenuSecretaria.setText("VOLVER");
         botMenuSecretaria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botMenuSecretariaActionPerformed(evt);
             }
         });
-        getContentPane().add(botMenuSecretaria, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 670, -1, 30));
+        getContentPane().add(botMenuSecretaria, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 640, -1, 30));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 204));
@@ -111,7 +113,7 @@ public class ConsultaPacientes extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 750, 340));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 750, 340));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel10.setText("Fecha : ");
@@ -122,8 +124,9 @@ public class ConsultaPacientes extends javax.swing.JFrame {
         jButton1.setText("BUSCAR");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 120, -1));
 
-        jButton2.setText("LIMPIAR");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, 160, -1));
+        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/limpiar.png"))); // NOI18N
+        btnLimpiar.setText("LIMPIAR");
+        getContentPane().add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, 160, -1));
 
         jLabel2.setText("Hasta: ");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, -1, -1));
@@ -180,11 +183,16 @@ public class ConsultaPacientes extends javax.swing.JFrame {
         jLabel11.setOpaque(true);
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 150, 20));
 
-        jButton3.setText("CANCELAR TURNO");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 160, -1));
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/cancelar.png"))); // NOI18N
+        btnCancelar.setText("CANCELAR TURNO");
+        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 160, -1));
 
-        jButton4.setText("ELIMINAR TURNO");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, 160, -1));
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/eliminar.png"))); // NOI18N
+        btnEliminar.setText("ELIMINAR TURNO");
+        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, 160, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/consultapaciente.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 710));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -216,10 +224,11 @@ public class ConsultaPacientes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botMenuSecretaria;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;

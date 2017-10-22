@@ -27,6 +27,9 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="botMenuPrincipal">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/visual/imagenes/volver.gif"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="VOLVER A MENU PRINCIPAL"/>
       </Properties>
       <Events>
@@ -34,7 +37,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="630" y="520" width="-1" height="30"/>
+          <AbsoluteConstraints x="600" y="520" width="-1" height="30"/>
         </Constraint>
       </Constraints>
     </Component>

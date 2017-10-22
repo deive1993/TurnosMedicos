@@ -228,7 +228,8 @@ public class PacienteRegistro extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 370, 87));
 
-        botRegistrar.setText("REGISTRAR PACIENTE");
+        botRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/guardar.png"))); // NOI18N
+        botRegistrar.setText("REGISTRAR");
         botRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botRegistrarActionPerformed(evt);
@@ -236,7 +237,8 @@ public class PacienteRegistro extends javax.swing.JFrame {
         });
         getContentPane().add(botRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, 270, 37));
 
-        botIliminar.setText("ELIMINAR PACIENTE");
+        botIliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/limpiar.png"))); // NOI18N
+        botIliminar.setText("LIMPIAR ");
         getContentPane().add(botIliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, 270, 37));
 
         botEditar.setText("EDITAR PACIENTE");
@@ -256,13 +258,14 @@ public class PacienteRegistro extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/images (1).jpg"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 0, 110, 100));
 
+        botMenuPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/atras.jpg"))); // NOI18N
         botMenuPaciente.setText("VOLVER");
         botMenuPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botMenuPacienteActionPerformed(evt);
             }
         });
-        getContentPane().add(botMenuPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 520, 270, 40));
+        getContentPane().add(botMenuPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 540, 90, 20));
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/fondo azul.jpeg"))); // NOI18N
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 570));

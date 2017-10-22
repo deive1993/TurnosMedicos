@@ -41,6 +41,7 @@ public class Acceso extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel3 = new javax.swing.JLabel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtUsu = new javax.swing.JTextField();
@@ -53,6 +54,7 @@ public class Acceso extends javax.swing.JFrame {
         opcMedico = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/fondo_verde.jpg"))); // NOI18N
 
@@ -85,6 +87,7 @@ public class Acceso extends javax.swing.JFrame {
         });
         getContentPane().add(passContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 120, 20));
 
+        botAceptar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/aceptar.jpg"))); // NOI18N
         botAceptar.setText("ACEPTAR");
         botAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,29 +96,33 @@ public class Acceso extends javax.swing.JFrame {
         });
         getContentPane().add(botAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 110, -1));
 
+        botCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/cancelar.png"))); // NOI18N
         botCancelar.setText("CANCELAR");
         botCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botCancelarActionPerformed(evt);
             }
         });
-        getContentPane().add(botCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 110, -1));
+        getContentPane().add(botCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 130, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/Banned User.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 130, 120));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 130, 120));
 
         opcPaciente.setText("PACIENTE");
         getContentPane().add(opcPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
 
         opcSecretaria.setText("SECRETARIA");
-        getContentPane().add(opcSecretaria, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, -1, -1));
+        getContentPane().add(opcSecretaria, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, -1, -1));
 
         opcMedico.setText("MEDICO");
-        getContentPane().add(opcMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, -1));
+        getContentPane().add(opcMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, -1, -1));
 
         jLabel5.setText("¿ vos sos ?, selecione su opción :");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 200, -1));
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/fondologin.jpg"))); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 210));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -143,11 +150,13 @@ public class Acceso extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botAceptar;
     private javax.swing.JButton botCancelar;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton opcMedico;
     private javax.swing.JRadioButton opcPaciente;

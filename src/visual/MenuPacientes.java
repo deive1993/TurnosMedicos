@@ -44,13 +44,14 @@ public class MenuPacientes extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/images (1).jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(655, 0, -1, 90));
 
+        botMenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/volver.gif"))); // NOI18N
         botMenuPrincipal.setText("VOLVER A MENU PRINCIPAL");
         botMenuPrincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botMenuPrincipalActionPerformed(evt);
             }
         });
-        getContentPane().add(botMenuPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 510, -1, 30));
+        getContentPane().add(botMenuPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 520, -1, 30));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 153));

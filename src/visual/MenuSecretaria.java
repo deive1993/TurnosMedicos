@@ -67,6 +67,7 @@ public class MenuSecretaria extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         botConsdeTurnosxProf = new javax.swing.JButton();
         botConsdeDatosPersonales = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -81,13 +82,14 @@ public class MenuSecretaria extends javax.swing.JFrame {
         botConsdeTurnosxPaciente.setText("CONSULTA DE TURNOS POR PACIENTE");
         getContentPane().add(botConsdeTurnosxPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, 430, 40));
 
+        botMenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/volver.gif"))); // NOI18N
         botMenuPrincipal.setText("VOLVER A MENU PRINCIPAL");
         botMenuPrincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botMenuPrincipalActionPerformed(evt);
             }
         });
-        getContentPane().add(botMenuPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 560, -1, -1));
+        getContentPane().add(botMenuPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 560, -1, -1));
 
         botReprogramarTurno.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         botReprogramarTurno.setText("REPROGRAMAR TURNOS");
@@ -124,6 +126,9 @@ public class MenuSecretaria extends javax.swing.JFrame {
         botConsdeDatosPersonales.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         botConsdeDatosPersonales.setText("CONSULTA DATOS PERSONALES");
         getContentPane().add(botConsdeDatosPersonales, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, 430, 40));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/secretaria.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -178,6 +183,7 @@ public class MenuSecretaria extends javax.swing.JFrame {
     private javax.swing.JButton botRegistroEspecialidad;
     private javax.swing.JButton botReprogramarTurno;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 
