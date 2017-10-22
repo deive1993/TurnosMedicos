@@ -20,6 +20,7 @@ public class ControladorRegistroEspecialidadSecre implements MouseListener{
 
         RegistroEspecialidad registro = new RegistroEspecialidad();
         registro.setVisible(true);
+        registro.setAlwaysOnTop(true);
     }
 
     @Override

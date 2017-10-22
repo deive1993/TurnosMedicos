@@ -19,6 +19,7 @@ public class ControladorReprogramarTurnosSecre implements MouseListener{
     public void mouseClicked(MouseEvent e) {
           ReprogramarTurnosSecretaria reprogramarTurnos = new ReprogramarTurnosSecretaria();
         reprogramarTurnos.setVisible(true);
+        reprogramarTurnos.setAlwaysOnTop(true);
     }
 
     @Override

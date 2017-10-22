@@ -19,6 +19,7 @@ public class ControladorConsultaTurnosxPaciente implements MouseListener{
     public void mouseClicked(MouseEvent e) {
         ConsultaPacientes consultaPaciente = new ConsultaPacientes();
         consultaPaciente.setVisible(true);
+        consultaPaciente.setAlwaysOnTop(true);
                 
     }
 

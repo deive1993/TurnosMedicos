@@ -19,6 +19,7 @@ public class ControladorConsultaTurnosxProfesional implements MouseListener{
     public void mouseClicked(MouseEvent e) {
         ConsultaTurnosxProfesionales consultaturnosxprof = new ConsultaTurnosxProfesionales();
         consultaturnosxprof.setVisible(true);
+        consultaturnosxprof.setAlwaysOnTop(true);
     }
 
     @Override

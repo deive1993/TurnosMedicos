@@ -21,6 +21,7 @@ public class ControladorTurnosPaciente implements MouseListener{
       
         PacienteMisTurnos misTurnos = new PacienteMisTurnos();
         misTurnos.setVisible(true);
+        misTurnos.setAlwaysOnTop(true);
     }
 
     @Override

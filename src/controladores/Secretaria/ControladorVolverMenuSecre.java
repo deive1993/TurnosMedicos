@@ -18,7 +18,9 @@ public class ControladorVolverMenuSecre implements MouseListener{
     @Override
     public void mouseClicked(MouseEvent e) {
         MenuSecretaria menuSecre = new MenuSecretaria();
-        menuSecre.setVisible(true);    }
+        menuSecre.setVisible(true);    
+        menuSecre.setAlwaysOnTop(true);    
+    }
 
     @Override
     public void mousePressed(MouseEvent e) {

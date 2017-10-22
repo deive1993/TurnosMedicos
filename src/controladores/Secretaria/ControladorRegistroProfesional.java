@@ -19,6 +19,7 @@ public class ControladorRegistroProfesional implements MouseListener{
     public void mouseClicked(MouseEvent e) {
         RegistroProfesionales registrarProfesionales = new RegistroProfesionales();
         registrarProfesionales.setVisible(true);
+        registrarProfesionales.setAlwaysOnTop(true);
     }
 
     @Override

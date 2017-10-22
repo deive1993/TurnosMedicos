@@ -19,6 +19,7 @@ public class ControladorVolverMenuProfesional implements MouseListener{
     public void mouseClicked(MouseEvent e) {
         MenuProfesionales menuProfesional = new MenuProfesionales();
         menuProfesional.setVisible(true);
+        menuProfesional.setAlwaysOnTop(true);
     }
 
     @Override

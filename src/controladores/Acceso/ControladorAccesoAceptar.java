@@ -44,6 +44,7 @@ public class ControladorAccesoAceptar implements MouseListener{
         
         MenuPrincipal menu = new MenuPrincipal();
         menu.setVisible(true);
+        menu.setAlwaysOnTop(true);
         
           
         

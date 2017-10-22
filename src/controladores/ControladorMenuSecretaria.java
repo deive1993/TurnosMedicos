@@ -20,6 +20,7 @@ public class ControladorMenuSecretaria implements MouseListener{
          
         MenuSecretaria secretaria = new MenuSecretaria();
         secretaria.setVisible(true);
+        secretaria.setAlwaysOnTop(true);
     }
 
     @Override

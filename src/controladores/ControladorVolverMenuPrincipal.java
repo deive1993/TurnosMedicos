@@ -19,6 +19,7 @@ public class ControladorVolverMenuPrincipal implements MouseListener{
     public void mouseClicked(MouseEvent e) {
         MenuPrincipal menu = new MenuPrincipal();
         menu.setVisible(true);
+        menu.setAlwaysOnTop(true);
     }
 
     @Override

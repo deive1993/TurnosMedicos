@@ -19,6 +19,7 @@ public class ControladorMisTurnosProf implements MouseListener{
     public void mouseClicked(MouseEvent e) {
         ProfesionalMisTurnos misTurnosProfecional = new ProfesionalMisTurnos();
         misTurnosProfecional.setVisible(true);
+        misTurnosProfecional.setAlwaysOnTop(true);
     }
 
     @Override

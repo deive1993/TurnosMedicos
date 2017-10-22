@@ -23,6 +23,7 @@ public class ControladorConsultaDatosPersonales implements MouseListener{
     public void mousePressed(MouseEvent e) {
         ConsultaDatosPersonales datosPersonales = new ConsultaDatosPersonales();
         datosPersonales.setVisible(true);
+        datosPersonales.setAlwaysOnTop(true);
     }
 
     @Override

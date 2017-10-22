@@ -20,6 +20,7 @@ public class ControladorCancelarTurnosSecre implements MouseListener{
         
          ReprogramarTurnosPacientes estadoTurnos = new ReprogramarTurnosPacientes();
         estadoTurnos.setVisible(true);
+        estadoTurnos.setAlwaysOnTop(true);
     }
 
     @Override

@@ -20,6 +20,7 @@ public class ControladorMenuProfesionales implements MouseListener{
         
         MenuProfesionales profesional = new MenuProfesionales();
         profesional.setVisible(true);
+        profesional.setAlwaysOnTop(true);
     }
 
     @Override

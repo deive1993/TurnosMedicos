@@ -20,6 +20,7 @@ public class ControladorMenuPaciente implements MouseListener{
          
         MenuPacientes paciente = new MenuPacientes();
         paciente.setVisible(true);
+        paciente.setAlwaysOnTop(true);
         
     }
 

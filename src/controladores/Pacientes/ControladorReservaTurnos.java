@@ -19,6 +19,7 @@ public class ControladorReservaTurnos implements MouseInputListener{
     public void mouseClicked(MouseEvent e) {
         PacienteReservaTurnos reservaTurnos = new PacienteReservaTurnos();
         reservaTurnos.setVisible(true);
+        reservaTurnos.setAlwaysOnTop(true);
     }
 
     @Override

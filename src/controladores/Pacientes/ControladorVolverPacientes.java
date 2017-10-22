@@ -20,6 +20,7 @@ public class ControladorVolverPacientes implements MouseListener{
         
         MenuPacientes menuPaciente = new MenuPacientes();
         menuPaciente.setVisible(true);
+        menuPaciente.setAlwaysOnTop(true);
     }
 
     @Override
