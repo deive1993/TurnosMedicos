@@ -57,13 +57,14 @@ public class ReprogramarTurnosSecretaria extends javax.swing.JFrame {
         jComboBox2 = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        btonBuscar = new javax.swing.JButton();
-        btonBuscar2 = new javax.swing.JButton();
-        btonLimpiar1 = new javax.swing.JButton();
-        btonLimpiar = new javax.swing.JButton();
+        botAsignar = new javax.swing.JButton();
+        botModificar = new javax.swing.JButton();
+        botLimpiar = new javax.swing.JButton();
+        botCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        botMenuSecretaria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/atras.jpg"))); // NOI18N
         botMenuSecretaria.setText("VOLVER");
         botMenuSecretaria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,31 +181,35 @@ public class ReprogramarTurnosSecretaria extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        btonBuscar.setText("CANCELAR");
-        btonBuscar.addActionListener(new java.awt.event.ActionListener() {
+        botAsignar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/guardar.png"))); // NOI18N
+        botAsignar.setText("ASIGNAR");
+        botAsignar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btonBuscarActionPerformed(evt);
+                botAsignarActionPerformed(evt);
             }
         });
 
-        btonBuscar2.setText("ELIMINAR");
-        btonBuscar2.addActionListener(new java.awt.event.ActionListener() {
+        botModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/modificar.jpg"))); // NOI18N
+        botModificar.setText("MODIFICAR");
+        botModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btonBuscar2ActionPerformed(evt);
+                botModificarActionPerformed(evt);
             }
         });
 
-        btonLimpiar1.setText("LIMPIAR");
-        btonLimpiar1.addActionListener(new java.awt.event.ActionListener() {
+        botLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/limpiar.png"))); // NOI18N
+        botLimpiar.setText("LIMPIAR");
+        botLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btonLimpiar1ActionPerformed(evt);
+                botLimpiarActionPerformed(evt);
             }
         });
 
-        btonLimpiar.setText("MODIFICAR");
-        btonLimpiar.addActionListener(new java.awt.event.ActionListener() {
+        botCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/cancelar.png"))); // NOI18N
+        botCancelar.setText("CANCELAR");
+        botCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btonLimpiarActionPerformed(evt);
+                botCancelarActionPerformed(evt);
             }
         });
 
@@ -214,16 +219,25 @@ public class ReprogramarTurnosSecretaria extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botMenuSecretaria)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(botMenuSecretaria)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(botCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(botModificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(botAsignar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(botLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(101, 101, 101)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addContainerGap(147, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGap(0, 29, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(470, 470, 470)
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -260,32 +274,34 @@ public class ReprogramarTurnosSecretaria extends javax.swing.JFrame {
                                 .addComponent(jLabel12)
                                 .addComponent(jLabel13))
                             .addGap(2, 2, 2)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGap(66, 66, 66))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(2, 2, 2)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(20, 20, 20)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btonBuscar2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btonLimpiar1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btonLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGap(0, 59, Short.MAX_VALUE)))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 47, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 412, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
+                .addComponent(botAsignar)
+                .addGap(29, 29, 29)
+                .addComponent(botModificar)
+                .addGap(33, 33, 33)
+                .addComponent(botLimpiar)
+                .addGap(31, 31, 31)
+                .addComponent(botCancelar)
+                .addGap(61, 61, 61)
                 .addComponent(botMenuSecretaria)
-                .addContainerGap())
+                .addGap(0, 0, 0))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 90, Short.MAX_VALUE)
+                    .addGap(0, 112, Short.MAX_VALUE)
                     .addComponent(jLabel10)
                     .addGap(6, 6, 6)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -324,18 +340,8 @@ public class ReprogramarTurnosSecretaria extends javax.swing.JFrame {
                             .addGap(10, 10, 10)
                             .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGap(5, 5, 5)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(15, 15, 15)
-                            .addComponent(btonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(20, 20, 20)
-                            .addComponent(btonBuscar2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(20, 20, 20)
-                            .addComponent(btonLimpiar1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(30, 30, 30)
-                            .addComponent(btonLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 24, Short.MAX_VALUE)))
         );
 
         pack();
@@ -374,29 +380,29 @@ public class ReprogramarTurnosSecretaria extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
-    private void btonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btonBuscarActionPerformed
+    private void botAsignarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botAsignarActionPerformed
+
+    }//GEN-LAST:event_botAsignarActionPerformed
+
+    private void botModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botModificarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btonBuscarActionPerformed
+    }//GEN-LAST:event_botModificarActionPerformed
 
-    private void btonBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btonBuscar2ActionPerformed
+    private void botLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botLimpiarActionPerformed
+    
+    }//GEN-LAST:event_botLimpiarActionPerformed
+
+    private void botCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botCancelarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btonBuscar2ActionPerformed
-
-    private void btonLimpiar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btonLimpiar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btonLimpiar1ActionPerformed
-
-    private void btonLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btonLimpiarActionPerformed
-
-    }//GEN-LAST:event_btonLimpiarActionPerformed
+    }//GEN-LAST:event_botCancelarActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botAsignar;
+    private javax.swing.JButton botCancelar;
+    private javax.swing.JButton botLimpiar;
     private javax.swing.JButton botMenuSecretaria;
-    private javax.swing.JButton btonBuscar;
+    private javax.swing.JButton botModificar;
     private javax.swing.JButton btonBuscar1;
-    private javax.swing.JButton btonBuscar2;
-    private javax.swing.JButton btonLimpiar;
-    private javax.swing.JButton btonLimpiar1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;

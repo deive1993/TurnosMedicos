@@ -44,8 +44,8 @@ public class PacienteReservaTurnos extends javax.swing.JFrame {
         txtReg = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        botBuscar = new javax.swing.JButton();
+        tablaAsigTurno = new javax.swing.JTable();
+        botAsignar = new javax.swing.JButton();
         botMenuPaciente = new javax.swing.JButton();
         botLimpiar = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -53,8 +53,8 @@ public class PacienteReservaTurnos extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         txtReg1 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        botBuscar1 = new javax.swing.JButton();
-        botBuscar2 = new javax.swing.JButton();
+        botModificar = new javax.swing.JButton();
+        botCancelar = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
@@ -92,7 +92,7 @@ public class PacienteReservaTurnos extends javax.swing.JFrame {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("ASIGNACION DE TURNOS");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaAsigTurno.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -126,15 +126,17 @@ public class PacienteReservaTurnos extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tablaAsigTurno);
 
-        botBuscar.setText("ASIGNAR");
-        botBuscar.addActionListener(new java.awt.event.ActionListener() {
+        botAsignar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/guardar.png"))); // NOI18N
+        botAsignar.setText("ASIGNAR");
+        botAsignar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botBuscarActionPerformed(evt);
+                botAsignarActionPerformed(evt);
             }
         });
 
+        botMenuPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/atras.jpg"))); // NOI18N
         botMenuPaciente.setText("VOLVER");
         botMenuPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,6 +144,7 @@ public class PacienteReservaTurnos extends javax.swing.JFrame {
             }
         });
 
+        botLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/limpiar.png"))); // NOI18N
         botLimpiar.setText("LIMPIAR");
         botLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,17 +171,19 @@ public class PacienteReservaTurnos extends javax.swing.JFrame {
 
         jLabel10.setText("Especialidad : ");
 
-        botBuscar1.setText("MODIFICAR");
-        botBuscar1.addActionListener(new java.awt.event.ActionListener() {
+        botModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/modificar.jpg"))); // NOI18N
+        botModificar.setText("MODIFICAR");
+        botModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botBuscar1ActionPerformed(evt);
+                botModificarActionPerformed(evt);
             }
         });
 
-        botBuscar2.setText("CANCELAR");
-        botBuscar2.addActionListener(new java.awt.event.ActionListener() {
+        botCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/cancelar.png"))); // NOI18N
+        botCancelar.setText("CANCELAR");
+        botCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botBuscar2ActionPerformed(evt);
+                botCancelarActionPerformed(evt);
             }
         });
 
@@ -206,9 +211,9 @@ public class PacienteReservaTurnos extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(botBuscar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(botBuscar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(botBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botModificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botAsignar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(botLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(botMenuPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21))
@@ -280,14 +285,14 @@ public class PacienteReservaTurnos extends javax.swing.JFrame {
                     .addComponent(jLabel11)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
-                .addComponent(botBuscar)
+                .addComponent(botAsignar)
                 .addGap(18, 18, 18)
-                .addComponent(botBuscar1)
+                .addComponent(botModificar)
                 .addGap(18, 18, 18)
                 .addComponent(botLimpiar)
                 .addGap(20, 20, 20)
-                .addComponent(botBuscar2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addComponent(botCancelar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addComponent(botMenuPaciente)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
@@ -331,9 +336,9 @@ public class PacienteReservaTurnos extends javax.swing.JFrame {
         txtReg.transferFocus();
     }//GEN-LAST:event_txtRegActionPerformed
 
-    private void botBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botBuscarActionPerformed
+    private void botAsignarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botAsignarActionPerformed
 
-    }//GEN-LAST:event_botBuscarActionPerformed
+    }//GEN-LAST:event_botAsignarActionPerformed
 
     private void botMenuPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botMenuPacienteActionPerformed
 
@@ -353,13 +358,13 @@ public class PacienteReservaTurnos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    private void botBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botBuscar1ActionPerformed
+    private void botModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botModificarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botBuscar1ActionPerformed
+    }//GEN-LAST:event_botModificarActionPerformed
 
-    private void botBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botBuscar2ActionPerformed
+    private void botCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botCancelarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botBuscar2ActionPerformed
+    }//GEN-LAST:event_botCancelarActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
@@ -371,11 +376,11 @@ public class PacienteReservaTurnos extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botBuscar;
-    private javax.swing.JButton botBuscar1;
-    private javax.swing.JButton botBuscar2;
+    private javax.swing.JButton botAsignar;
+    private javax.swing.JButton botCancelar;
     private javax.swing.JButton botLimpiar;
     private javax.swing.JButton botMenuPaciente;
+    private javax.swing.JButton botModificar;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
@@ -389,7 +394,7 @@ public class PacienteReservaTurnos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tablaAsigTurno;
     private javax.swing.JTextField txtApe;
     private javax.swing.JTextField txtNom;
     private javax.swing.JTextField txtReg;

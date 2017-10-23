@@ -39,16 +39,18 @@ public class ProfesionalMisTurnos extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        botLimpiar1 = new javax.swing.JButton();
-        botLimpiar = new javax.swing.JButton();
+        tablaMisTurnosPROF = new javax.swing.JTable();
         botMenuProfesional = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnBuscar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         jTextField6.setText("jTextField6");
 
@@ -63,7 +65,7 @@ public class ProfesionalMisTurnos extends javax.swing.JFrame {
         jLabel5.setText("MIS TURNOS");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 300, 60));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaMisTurnosPROF.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -97,33 +99,18 @@ public class ProfesionalMisTurnos extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tablaMisTurnosPROF);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 530, 280));
 
-        botLimpiar1.setText("CANCELAR TURNO");
-        botLimpiar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botLimpiar1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(botLimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(606, 200, 150, -1));
-
-        botLimpiar.setText("ELIMINAR TURNO");
-        botLimpiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botLimpiarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(botLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(606, 330, 150, -1));
-
+        botMenuProfesional.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/atras.jpg"))); // NOI18N
         botMenuProfesional.setText("VOLVER");
         botMenuProfesional.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botMenuProfesionalActionPerformed(evt);
             }
         });
-        getContentPane().add(botMenuProfesional, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 450, 130, -1));
+        getContentPane().add(botMenuProfesional, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 480, 130, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel10.setText("FECHA : ");
@@ -150,20 +137,27 @@ public class ProfesionalMisTurnos extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 70, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/buscar.png"))); // NOI18N
-        jButton1.setText("BUSCAR");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, 110, -1));
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/buscar.png"))); // NOI18N
+        btnBuscar.setText("BUSCAR");
+        getContentPane().add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, 110, -1));
+
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/cancelar.png"))); // NOI18N
+        btnCancelar.setText("CANCELAR TURNO");
+        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 200, 160, -1));
+
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/eliminar.png"))); // NOI18N
+        btnEliminar.setText("ELIMINAR TURNO");
+        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 250, 160, -1));
+
+        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/limpiar.png"))); // NOI18N
+        btnLimpiar.setText("LIMPIAR");
+        getContentPane().add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 290, 160, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/A-GUARDAPOLVO-MEDIC.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void botLimpiar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botLimpiar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botLimpiar1ActionPerformed
-
-    private void botLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botLimpiarActionPerformed
-
-    }//GEN-LAST:event_botLimpiarActionPerformed
 
     private void botMenuProfesionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botMenuProfesionalActionPerformed
 
@@ -179,20 +173,22 @@ public class ProfesionalMisTurnos extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botLimpiar;
-    private javax.swing.JButton botLimpiar1;
     private javax.swing.JButton botMenuProfesional;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnLimpiar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JTable tablaMisTurnosPROF;
     // End of variables declaration//GEN-END:variables
 
     private ControladorVolverMenuProfesional controladorVolverMenuProfesionales;

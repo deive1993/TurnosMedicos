@@ -241,7 +241,8 @@ public class PacienteRegistro extends javax.swing.JFrame {
         botIliminar.setText("LIMPIAR ");
         getContentPane().add(botIliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, 270, 37));
 
-        botEditar.setText("EDITAR PACIENTE");
+        botEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/modificar.jpg"))); // NOI18N
+        botEditar.setText("EDITAR ");
         botEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botEditarActionPerformed(evt);

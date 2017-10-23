@@ -150,7 +150,7 @@ public class Bienvenido extends javax.swing.JFrame {
     private void botRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botRegActionPerformed
 
         botReg.transferFocus();
-        Registrar regis = new Registrar();
+        RegistrarUsuario regis = new RegistrarUsuario();
         regis.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_botRegActionPerformed

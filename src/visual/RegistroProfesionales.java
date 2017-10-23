@@ -68,7 +68,7 @@ public class RegistroProfesionales extends javax.swing.JFrame {
         jList4 = new javax.swing.JList<>();
         btnRegistrar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
-        btnEditar = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jList2 = new javax.swing.JList<>();
         jScrollPane6 = new javax.swing.JScrollPane();
@@ -230,19 +230,22 @@ public class RegistroProfesionales extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 280, 87));
 
+        btnRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/guardar.png"))); // NOI18N
         btnRegistrar.setText("REGISTRAR");
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 410, 110, 37));
+        getContentPane().add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 450, 110, 37));
 
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/eliminar.png"))); // NOI18N
         btnEliminar.setText("ELIMINAR");
-        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 410, 100, 37));
+        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 450, 100, 37));
 
-        btnEditar.setText("LIMPIAR");
-        getContentPane().add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, 110, 40));
+        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/limpiar.png"))); // NOI18N
+        btnLimpiar.setText("LIMPIAR");
+        getContentPane().add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 450, 110, 40));
 
         jList2.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -269,7 +272,7 @@ public class RegistroProfesionales extends javax.swing.JFrame {
         });
         jScrollPane5.setViewportView(jList5);
 
-        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 43, 87));
+        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 43, 87));
 
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Tipo:");
@@ -297,13 +300,14 @@ public class RegistroProfesionales extends javax.swing.JFrame {
         jLabel11.setText("Tipo:");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 30, -1));
 
+        botMenuSecretaria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/atras.jpg"))); // NOI18N
         botMenuSecretaria.setText("VOLVER");
         botMenuSecretaria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botMenuSecretariaActionPerformed(evt);
             }
         });
-        getContentPane().add(botMenuSecretaria, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 510, 330, 40));
+        getContentPane().add(botMenuSecretaria, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 530, 110, 20));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/fondo azul.jpeg"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 570));
@@ -354,8 +358,8 @@ public class RegistroProfesionales extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botMenuSecretaria;
-    private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnRegistrar;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;

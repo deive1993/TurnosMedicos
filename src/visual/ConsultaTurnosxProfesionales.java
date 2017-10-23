@@ -83,7 +83,7 @@ public class ConsultaTurnosxProfesionales extends javax.swing.JFrame {
                 botMenuSecretariaActionPerformed(evt);
             }
         });
-        getContentPane().add(botMenuSecretaria, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 560, 125, -1));
+        getContentPane().add(botMenuSecretaria, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 560, 125, 30));
 
         jLabel2.setText("Hasta: ");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, -1, -1));

@@ -5,13 +5,22 @@
  */
 package visual;
 
+import controladores.ControladorRegistrarUsuario;
+import controladores.ControladorVolverAcceso;
 
-public class Registrar extends javax.swing.JFrame {
+
+public class RegistrarUsuario extends javax.swing.JFrame {
 
   
-    public Registrar() {
+    public RegistrarUsuario() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setTitle("REGISTRARSE");
         
+        
+        
+        controladorVolver = new ControladorVolverAcceso();
+        botCancelar.addMouseListener(controladorVolver);
       }
 
 
@@ -73,21 +82,23 @@ public class Registrar extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 100, 90));
         getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 301, 320, -1));
 
+        botCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/cancelar.png"))); // NOI18N
         botCancelar.setText("Cancelar");
         botCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botCancelarActionPerformed(evt);
             }
         });
-        getContentPane().add(botCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, 120, -1));
+        getContentPane().add(botCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 410, 120, 30));
 
+        botRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/usuarioregistrado.jpg"))); // NOI18N
         botRegistrar.setText("Registrar");
         botRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botRegistrarActionPerformed(evt);
             }
         });
-        getContentPane().add(botRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 410, 120, -1));
+        getContentPane().add(botRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 410, 120, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/Say-Goodbye-to-Coworkers-Step-8-Version-2.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 450));
@@ -107,42 +118,10 @@ public class Registrar extends javax.swing.JFrame {
     }//GEN-LAST:event_txtUsuarioActionPerformed
 
     private void botCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botCancelarActionPerformed
-        Bienvenido inicio = new Bienvenido();
-        inicio.setVisible(true);
-        this.setVisible(false);
+
     }//GEN-LAST:event_botCancelarActionPerformed
 
     
-        public static void main(String args[]) {
-      
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuSecretaria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuSecretaria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuSecretaria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuSecretaria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
-            new Registrar().setVisible(true);
-        });
-    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botCancelar;
     private javax.swing.JButton botRegistrar;
@@ -159,6 +138,6 @@ public class Registrar extends javax.swing.JFrame {
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 
-
-    //  private ControladorRegistrar controladorRegistro;
+private ControladorVolverAcceso controladorVolver;
+    
 }
