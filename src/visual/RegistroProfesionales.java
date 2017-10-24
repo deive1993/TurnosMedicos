@@ -67,7 +67,7 @@ public class RegistroProfesionales extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         jList4 = new javax.swing.JList<>();
         btnRegistrar = new javax.swing.JButton();
-        btnEliminar = new javax.swing.JButton();
+        btnModificar = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jList2 = new javax.swing.JList<>();
@@ -86,8 +86,9 @@ public class RegistroProfesionales extends javax.swing.JFrame {
 
         jButton4.setText("Volver a menu principal");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(0, 255, 51));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -239,9 +240,9 @@ public class RegistroProfesionales extends javax.swing.JFrame {
         });
         getContentPane().add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 450, 110, 37));
 
-        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/eliminar.png"))); // NOI18N
-        btnEliminar.setText("ELIMINAR");
-        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 450, 100, 37));
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/modificar.jpg"))); // NOI18N
+        btnModificar.setText("MODIFICAR");
+        getContentPane().add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 450, 110, 37));
 
         btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/limpiar.png"))); // NOI18N
         btnLimpiar.setText("LIMPIAR");
@@ -358,8 +359,8 @@ public class RegistroProfesionales extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botMenuSecretaria;
-    private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnLimpiar;
+    private javax.swing.JButton btnModificar;
     private javax.swing.JButton btnRegistrar;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;

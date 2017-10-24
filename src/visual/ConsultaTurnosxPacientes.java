@@ -58,7 +58,8 @@ public class ConsultaTurnosxPacientes extends javax.swing.JFrame {
         btnEliminar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         botMenuSecretaria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/atras.jpg"))); // NOI18N
@@ -125,7 +126,7 @@ public class ConsultaTurnosxPacientes extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 120, -1));
 
         btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/limpiar.png"))); // NOI18N
-        btnLimpiar.setText("LIMPIAR");
+        btnLimpiar.setText("LIMPIAR DATOS");
         getContentPane().add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, 160, -1));
 
         jLabel2.setText("Hasta: ");

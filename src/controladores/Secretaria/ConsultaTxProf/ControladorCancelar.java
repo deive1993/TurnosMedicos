@@ -3,23 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controladores;
+package controladores.Secretaria.ConsultaTxProf;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import visual.Acceso;
 
 /**
  *
  * @author USER
  */
-public class ControladorVolverAcceso implements MouseListener{
+public class ControladorCancelar implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        Acceso inicio = new Acceso();
-        inicio.setVisible(true);
-        inicio.setAlwaysOnTop(true);
     }
 
     @Override

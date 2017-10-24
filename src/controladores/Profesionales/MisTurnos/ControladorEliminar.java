@@ -3,24 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controladores;
+package controladores.Profesionales.MisTurnos;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import visual.RegistrarUsuario;
-
 
 /**
  *
  * @author USER
  */
-public class ControladorRegistrarUsuario implements MouseListener{
+public class ControladorEliminar implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        RegistrarUsuario registrar = new RegistrarUsuario();
-        registrar.setVisible(true);
-        registrar.setAlwaysOnTop(true);
     }
 
     @Override

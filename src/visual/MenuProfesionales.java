@@ -45,7 +45,7 @@ public class MenuProfesionales extends javax.swing.JFrame {
         botEstadoTurnos = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         botMenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/volver.gif"))); // NOI18N

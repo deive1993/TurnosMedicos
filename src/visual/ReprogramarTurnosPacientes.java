@@ -39,13 +39,9 @@ public class ReprogramarTurnosPacientes extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         txtFechaFin = new javax.swing.JTextField();
-        btonBuscar = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
-        btonLimpiar = new javax.swing.JButton();
         botMenuPaciente = new javax.swing.JButton();
-        btonBuscar1 = new javax.swing.JButton();
-        btonLimpiar1 = new javax.swing.JButton();
-        btonBuscar2 = new javax.swing.JButton();
+        btnBuscar = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -55,8 +51,14 @@ public class ReprogramarTurnosPacientes extends javax.swing.JFrame {
         jComboBox3 = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        botCancelar = new javax.swing.JButton();
+        botLimpiar = new javax.swing.JButton();
+        botModificar = new javax.swing.JButton();
+        botAsignar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 255, 204));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
@@ -109,52 +111,21 @@ public class ReprogramarTurnosPacientes extends javax.swing.JFrame {
         });
         getContentPane().add(txtFechaFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 120, 90, -1));
 
-        btonBuscar.setText("CANCELAR");
-        btonBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btonBuscarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 260, 110, 30));
-
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/images (1).jpg"))); // NOI18N
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, 100, 90));
 
-        btonLimpiar.setText("MODIFICAR");
-        btonLimpiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btonLimpiarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btonLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 440, 110, 30));
-
+        botMenuPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/atras.jpg"))); // NOI18N
         botMenuPaciente.setText("VOLVER");
         botMenuPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botMenuPacienteActionPerformed(evt);
             }
         });
-        getContentPane().add(botMenuPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 560, 100, 30));
+        getContentPane().add(botMenuPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 590, 100, 20));
 
-        btonBuscar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/buscar.png"))); // NOI18N
-        btonBuscar1.setText("BUSCAR");
-        getContentPane().add(btonBuscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 110, 20));
-
-        btonLimpiar1.setText("LIMPIAR");
-        btonLimpiar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btonLimpiar1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btonLimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 380, 110, 30));
-
-        btonBuscar2.setText("ELIMINAR");
-        btonBuscar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btonBuscar2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btonBuscar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 320, 110, 30));
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/buscar.png"))); // NOI18N
+        btnBuscar.setText("BUSCAR");
+        getContentPane().add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 110, 20));
 
         jLabel12.setText("Especialidad : ");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, -1, -1));
@@ -228,7 +199,43 @@ public class ReprogramarTurnosPacientes extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 550, 350));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 550, 330));
+
+        botCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/cancelar.png"))); // NOI18N
+        botCancelar.setText("CANCELAR");
+        botCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botCancelarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 420, 110, -1));
+
+        botLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/limpiar.png"))); // NOI18N
+        botLimpiar.setText("LIMPIAR");
+        botLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botLimpiarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 380, 110, -1));
+
+        botModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/modificar.jpg"))); // NOI18N
+        botModificar.setText("MODIFICAR");
+        botModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botModificarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 330, -1, -1));
+
+        botAsignar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visual/imagenes/guardar.png"))); // NOI18N
+        botAsignar.setText("ASIGNAR");
+        botAsignar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botAsignarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botAsignar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 280, 110, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -236,11 +243,6 @@ public class ReprogramarTurnosPacientes extends javax.swing.JFrame {
     private void botMenuPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botMenuPacienteActionPerformed
        
     }//GEN-LAST:event_botMenuPacienteActionPerformed
-
-    private void btonLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btonLimpiarActionPerformed
-      
-      
-    }//GEN-LAST:event_btonLimpiarActionPerformed
 
     private void txtRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRegistActionPerformed
         txtRegist.transferFocus();
@@ -258,18 +260,6 @@ public class ReprogramarTurnosPacientes extends javax.swing.JFrame {
         txtFechaFin.transferFocus();
     }//GEN-LAST:event_txtFechaFinActionPerformed
 
-    private void btonLimpiar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btonLimpiar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btonLimpiar1ActionPerformed
-
-    private void btonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btonBuscarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btonBuscarActionPerformed
-
-    private void btonBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btonBuscar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btonBuscar2ActionPerformed
-
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
@@ -282,14 +272,30 @@ public class ReprogramarTurnosPacientes extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
+    private void botCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botCancelarActionPerformed
+
+    private void botLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botLimpiarActionPerformed
+
+    }//GEN-LAST:event_botLimpiarActionPerformed
+
+    private void botModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botModificarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botModificarActionPerformed
+
+    private void botAsignarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botAsignarActionPerformed
+
+    }//GEN-LAST:event_botAsignarActionPerformed
+
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botAsignar;
+    private javax.swing.JButton botCancelar;
+    private javax.swing.JButton botLimpiar;
     private javax.swing.JButton botMenuPaciente;
-    private javax.swing.JButton btonBuscar;
-    private javax.swing.JButton btonBuscar1;
-    private javax.swing.JButton btonBuscar2;
-    private javax.swing.JButton btonLimpiar;
-    private javax.swing.JButton btonLimpiar1;
+    private javax.swing.JButton botModificar;
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;

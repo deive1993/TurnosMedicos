@@ -5,8 +5,8 @@
  */
 package visual;
 
-import controladores.ControladorRegistrarUsuario;
-import controladores.ControladorVolverAcceso;
+import controladores.Acceso.ControladorRegistrarUsuario;
+import controladores.Acceso.ControladorVolverAcceso;
 
 
 public class RegistrarUsuario extends javax.swing.JFrame {

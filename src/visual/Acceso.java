@@ -8,7 +8,7 @@ package visual;
 import DAO.Coneccion;
 import controladores.Acceso.ControladorAccesoAceptar;
 import controladores.Acceso.ControladorAccesoCancelar;
-import controladores.ControladorRegistrarUsuario;
+import controladores.Acceso.ControladorRegistrarUsuario;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.sql.*;
@@ -28,7 +28,7 @@ public class Acceso extends javax.swing.JFrame {
      */
     public Acceso() {
         initComponents();
-        cerrar();
+       
         this.setLocationRelativeTo(null);
         this.setTitle("ACCESO");
         
@@ -43,7 +43,7 @@ public class Acceso extends javax.swing.JFrame {
         botRegistrarse.addMouseListener(controladorRegistrar);
         
     }
-   
+   /*
     public void cerrar(){
         try {
             this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
@@ -67,7 +67,7 @@ public class Acceso extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Gracias por su visita hasta pronto", "Gracias",JOptionPane.INFORMATION_MESSAGE);
         System.exit(0);
     }
-    
+    */
             
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
