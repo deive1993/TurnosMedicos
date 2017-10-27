@@ -32,7 +32,7 @@ public class Coneccion {
             Class.forName("com.mysql.jdbc.Driver");
 <<<<<<< HEAD
          //   cnx = DriverManager.getConnection("jdbc:mysql://"+this.host+"/"+this.bd, this.usu, this.clave);
-            cnx = DriverManager.getConnection("jdbc:mysql://localhost:3307/base_turnos","root","teamo110593gnd");
+            cnx = DriverManager.getConnection("jdbc:mysql://localhost:3307/base_turnos","root","");
 =======
            // cnx = DriverManager.getConnection("jdbc:mysql://localhost:3307/base_turnos","root","teamo110593gnd");
             cnx = DriverManager.getConnection("jdbc:mysql://"+this.host+"/"+this.bd, this.usu, this.clave);
