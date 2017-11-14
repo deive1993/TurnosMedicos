@@ -6,45 +6,69 @@
 package DAO;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import models.Persona;
-<<<<<<< HEAD
 import models.PersonaEmail;
-import models.PersonaGenero;
 import models.PersonaTelefono;
 import models.TipoEmail;
 import models.TipoTel;
-=======
 import models.PersonaGenero;
->>>>>>> a88a7b52d20731e07832dc302e1eb96234c026c2
 
 public class Consulta {
+   Connection conect;
+   PreparedStatement s;
+   String user = "root";
+   String password = "";
+   String url = "jdbc:mysql://localhost:3306/turnosmedicos";
+   String driver= "com.mysql.jdbc.Driver";  
    
+   public void guardarUsuario( String nombre,String apellido, Integer dni, Integer persona_genero_id, String usuario, String contraseña) throws SQLException{
+       try {
+            Class.forName(driver);
+            conect=DriverManager.getConnection(url,user,password);
+            s=conect.prepareStatement("insert into persona (nombre,apellido,dni,persona_genero_id,usuario,contraseña) values (?,?,?,?,?,?)");
+            s.setString(1, nombre);
+            s.setString(2, apellido);
+            s.setInt(3, dni);
+            s.setInt(4,persona_genero_id);
+            s.setString(5, usuario);
+            s.setString(6, contraseña);
+            s.executeUpdate();
+
+              
+           } 
+        catch (ClassNotFoundException e) {
+              JOptionPane.showMessageDialog(null, e);}
+       
+        catch(SQLException e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+       conect.close();
+   }
     // persona 
     
    public Persona recuperarPersonaUsuClave(Connection conexion, String pUsu, String pClave) throws SQLException {
       Persona unaPersona = null;
       PersonaGenero personaGenero;
       try{
-<<<<<<< HEAD
+
          PreparedStatement consulta = conexion.prepareStatement("select id, nombre, apellido, persona_genero_id, dni from persona where usuario = ? and  contraseña = md5(?)");
-=======
-         PreparedStatement consulta = conexion.prepareStatement("select id, nombre, apellido, genero_genero_id, dni from persona where usuario = ? and  contrasena = md5(?)");
->>>>>>> a88a7b52d20731e07832dc302e1eb96234c026c2
+
+       //  PreparedStatement consulta = conexion.prepareStatement("select id, nombre, apellido, genero_genero_id, dni from persona where usuario = ? and  contrasena = md5(?)");
          consulta.setString(1, pUsu);
          consulta.setString(2, pClave);
          ResultSet resultado = consulta.executeQuery();
          while(resultado.next()){
-<<<<<<< HEAD
+
              personaGenero = this.recuperarGeneroID(conexion,resultado.getInt("persona_genero_id"));
              unaPersona = new Persona(resultado.getInt("id"), personaGenero, resultado.getString("nombre"), resultado.getString("apellido"), resultado.getInt("dni"));
-=======
              
              unaPersona = new Persona(resultado.getInt("id"), null, resultado.getString("nombre"), resultado.getString("apellido"), resultado.getInt("dni"));
->>>>>>> a88a7b52d20731e07832dc302e1eb96234c026c2
             
          }
       }catch(SQLException ex){
@@ -94,8 +118,6 @@ public class Consulta {
       
      
    }
-<<<<<<< HEAD
- 
    
    // lista de persona genero (arraylist)
    
@@ -168,7 +190,7 @@ public class Consulta {
          while(resultado.next()){
              tipoEmail= this.recuperarEmailID(conexion,resultado.getInt("tipo_email_id"));
              unTelefono = = new PersonaEmail(resultado.getInt("id"), tipoEmail, resultado.getString("nombre"));
-=======
+
  /*
    public PersonaGenero recuperarGeneroId(Connection conexion,  Integer idGenero) throws SQLException{
        PersonaGenero personaGenero=null;
@@ -181,13 +203,13 @@ public class Consulta {
          while(resultado.next()){
              
              unaPersona = new Persona(resultado.getInt("id"), personaGenero, resultado.getString("nombre"), resultado.getString("apellido"), resultado.getInt("dni"));
->>>>>>> a88a7b52d20731e07832dc302e1eb96234c026c2
+
             
          }
       }catch(SQLException ex){
          throw new SQLException(ex);
       }
-<<<<<<< HEAD
+
       return unEmail;
    }
    
@@ -210,6 +232,7 @@ public class Consulta {
 =======
       return personaGenero;       
    }*/
->>>>>>> a88a7b52d20731e07832dc302e1eb96234c026c2
+
+ 
 }
 

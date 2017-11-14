@@ -10,6 +10,7 @@ import java.awt.event.MouseListener;
 import visual.RegistrarUsuario;
 
 
+
 /**
  *
  * @author USER
@@ -18,13 +19,17 @@ public class ControladorRegistrarUsuario implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        RegistrarUsuario registrar = new RegistrarUsuario();
+       RegistrarUsuario registrar = new RegistrarUsuario();
         registrar.setVisible(true);
         registrar.setAlwaysOnTop(true);
-    }
+       
+  
+      }
+   
 
     @Override
     public void mousePressed(MouseEvent e) {
+        
     }
 
     @Override

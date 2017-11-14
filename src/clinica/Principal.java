@@ -8,6 +8,7 @@ package clinica;
 import DAO.Coneccion;
 import java.sql.SQLException;
 import visual.Acceso;
+import visual.RegistrarUsuario;
 
 
 
@@ -20,11 +21,12 @@ public class Principal {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
       
       
-        Acceso usuario = new Acceso();
+       /* Acceso usuario = new Acceso();
         usuario.setVisible(true);
-        usuario.setAlwaysOnTop(true);
+        usuario.setAlwaysOnTop(true);*/
 
-
+       RegistrarUsuario registrar= new RegistrarUsuario();
+        registrar.setVisible(true);
     }
     
 }
